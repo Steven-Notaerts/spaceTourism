@@ -1,0 +1,24 @@
+﻿:root {
+  /*----COLORS--------------------*/
+  --clr-dark: #0b0d17;
+  //rgb: 11,13,23
+  //hsl: 230°, 35%,7%
+  --clr-light-blue: #d0d6d9;
+  //rgb: 208, 214, 249
+  //hsl: 231°, 77%,90%
+  --clr-white: #ffffff;
+  //rgb: 255,255,255
+  //hsl: 0°, 0%,100%
+
+  /*----FONT-SIZE--------------------*/
+  font-size: 16px;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}

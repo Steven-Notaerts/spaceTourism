@@ -1,0 +1,176 @@
+﻿@import "../style/utils/variables";
+
+.header {
+  width: 100%;
+  max-width: $max-body-width;
+
+  @media (min-width: $small-screen-481) {
+    height: 6rem;
+  }
+  @media (min-width: $larger-screen-1281) {
+    margin-top: 2.5rem;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 25%,
+      rgba(255, 255, 255, 0.04) 100%
+    );
+    backdrop-filter: blur(5rem);
+  }
+  &__container {
+    width: 100%;
+    max-width: $max-container-width;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3125rem 1.125rem 0 1.125rem;
+
+    @media (min-width: $small-screen-481) {
+      height: 6rem;
+      padding: 0;
+      padding-left: 2.4375rem;
+    }
+  }
+
+  &__logo-image {
+    width: 2.5rem;
+    height: 2.5rem;
+    @media (min-width: $small-screen-481) {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  &__toggle-menu-btn {
+    position: absolute;
+    right: 1.125rem;
+
+    @media (max-width: $small-screen-481) {
+      background-image: url("/assets/image/shared/icon-hamburger.svg");
+      background-repeat: no-repeat;
+      background-color: transparent;
+      border: 0;
+      width: 1.5rem;
+      height: 1.3125rem;
+      z-index: 9999;
+    }
+    &[aria-expanded="true"] {
+      background-image: url("/assets/image/shared/icon-close.svg");
+    }
+    @media (min-width: $small-screen-481) {
+      display: none;
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  @media (max-width: $small-screen-481) {
+    --gap: 2em;
+    position: fixed;
+    inset: 0 0 0 30%;
+    flex-direction: column;
+    padding: calc(min(15vh, 10rem)) 0 2em 2em;
+    z-index: 10;
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+    backdrop-filter: blur(1rem);
+  }
+  @media (min-width: $small-screen-481) {
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    padding-inline: clamp(0.5rem, 3vw, 10rem);
+    --gap: clamp(1rem, 5vw, 3rem);
+    transform: none;
+    flex-direction: row;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(5rem);
+  }
+  @media (min-width: $larger-screen-1281) {
+    padding-right: 10.3125rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: none;
+    backdrop-filter: none;
+    &::before {
+      content: "";
+      border: 1px solid $white;
+      width: 29.5625rem;
+      margin-left: 10.4375rem;
+      margin-right: 5rem;
+      z-index: 10;
+      opacity: 0.25;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-weight: 700;
+    //margin inline is left and right, width -end in it you specify the right one
+    //  margin-inline: 0.75rem 0;
+    margin-block: 1rem;
+    text-transform: uppercase;
+    display: block;
+    color: $white;
+    font-family: $font-barlow-condensed;
+    letter-spacing: 2.7px;
+    font-weight: 400;
+    line-height: 1.9375rem;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      mix-blend-mode: normal;
+      height: 1.9375rem;
+      border-right: 4px solid rgba(255, 255, 255, 0.5);
+    }
+    @media (min-width: $small-screen-481) {
+      display: flex;
+      align-items: center;
+      margin-left: clamp(1rem, 4vw, 10rem);
+      height: 6rem;
+      letter-spacing: 2.3625px;
+      font-size: 0.875rem;
+      line-height: 1.0625rem;
+
+      &:hover {
+        border-right: 0;
+        mix-blend-mode: normal;
+        height: 6rem;
+        border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+      }
+    }
+    @media (min-width: $larger-screen-1281) {
+      font-size: 1rem;
+      line-height: 1.1875rem;
+      margin-left: 3rem;
+    }
+  }
+  &__number {
+    margin-inline-end: 0.75rem;
+    font-weight: 700;
+
+    @media (min-width: $small-screen-481) and (max-width: $medium-screen-961) {
+      display: none;
+    }
+  }
+  &[data-visible="true"] {
+    transform: translateX(0%);
+  }
+}
+
+@media (max-width: $small-screen-481) {
+  .active {
+    border-right: 4px solid $white;
+    height: 1.9375rem;
+  }
+}
+@media (min-width: $small-screen-481) {
+  .active {
+    border-right: 0;
+    height: 6rem;
+    border-bottom: 3px solid $white;
+  }
+}

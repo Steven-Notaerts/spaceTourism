@@ -1,0 +1,62 @@
+﻿/*----COLORS--------------------*/
+
+/*----FONTS--------------------*/
+$font-barlow-condensed: "Barlow Condensed", sans-serif;
+$font-barlow: "Barlow", sans-serif;
+$font-bellefair: "Bellefair", serif;
+
+/* colors ---------------------------------------------------*/
+$light-purple: #d0d6f9;
+$dark-background: #0b0d17;
+$white: #ffffff;
+/* fonts ---------------------------------------------------*/
+$font-barlow-condensed: "Barlow Condensed", sans-serif;
+$font-barlow: "Barlow", sans-serif;
+$font-bellefair: "Bellefair", serif;
+/* width & height ---------------------------------------------------*/
+
+$max-container-width: 1440px;
+$max-body-width: 5000px;
+
+/* Screen sizes ---------------------------------------------------*/
+// smartphones, iPhone, portrait 480x320 phones
+// 320px / 16 = 20(r)em
+//min width
+$small-screen-320: 20rem;
+@media (min-width: 20rem) {
+}
+
+//portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.
+//481px / 16 = 30.0625(r)em
+//min width
+$small-screen-481: 30.0625rem;
+@media (min-width: 30.0625rem) {
+}
+// portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
+//641px / 16 = 40.0625(r)em
+//min width
+$medium-screen-641: 40.0625rem;
+@media (min-width: 40.0625rem) {
+}
+// tablet, landscape iPad, lo-res laptops ands desktops
+//961px / 16 = 60.0625(r)em
+//min width
+$medium-screen-961: 60.0625rem;
+@media (min-width: 60.0625rem) {
+}
+// big landscape tablets, laptops, and desktops
+//1025px / 16 = 64.0625(r)em
+//min width
+$large-screen-1025: 64.0625rem;
+@media (min-width: 64.0625rem) {
+}
+//min width
+$larger-screen-1281: 80.0625rem;
+//1281px / 16 =80.0625(r)em
+//hi-res laptops and desktops
+@media (min-width: 80.0625rem) {
+}
+
+//mobile : 375 * 667
+//tables: 768 * 1024
+//desktop: 1440 * 900
