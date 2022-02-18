@@ -1,5 +1,9 @@
-﻿@import "../style/utils/variables";
-@import "../style/utils/mixins";
+﻿@import "../../style/utils/variables";
+@import "./style/utils/mixins";
+@import "../components/header";
+
+
+
 body {
   background: url("/assets/image/home/background-home-mobile.jpg");
   @include home-background();

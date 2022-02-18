@@ -117,38 +117,79 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"javaScript/header.js":[function(require,module,exports) {
-var primaryNav = document.querySelector(".navigation");
-var navToggle = document.querySelector(".header__toggle-menu-btn");
-navToggle.addEventListener("click", function () {
-  var visibility = primaryNav.getAttribute("data-visible");
+})({"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
 
-  if (visibility === "false") {
-    primaryNav.setAttribute("data-visible", true);
-    navToggle.setAttribute("aria-expanded", true);
-  } else if (visibility === "true") {
-    primaryNav.setAttribute("data-visible", false);
-    navToggle.setAttribute("aria-expanded", false);
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
   }
-});
-var activeLink = document.getElementsByClassName("navigation__link");
-console.log(activeLink); // for (let i = 0; i < activeLink.length; i++) {
-//   addEventListener("click", function (event) {
-//     event.preventDefault();
-//     if (activeLink) {
-//       console.log("ok" + activeLink[i].textContent);
-//     }
-//   });
-// }
 
-var addActiveClass = function addActiveClass() {
-  for (var i = 0; i < activeLink.length; i++) {
-    console.log(i);
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
   }
-};
 
-activeLink.addEventListener("click", addActiveClass());
-},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style/pages/_home.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"C:\\Users\\Steven\\Documents\\GitHub\\spaceTourism\\assets\\image\\shared\\icon-hamburger.svg":[["icon-hamburger.eb6e9105.svg","assets/image/shared/icon-hamburger.svg"],"assets/image/shared/icon-hamburger.svg"],"C:\\Users\\Steven\\Documents\\GitHub\\spaceTourism\\assets\\image\\shared\\icon-close.svg":[["icon-close.7dd67556.svg","assets/image/shared/icon-close.svg"],"assets/image/shared/icon-close.svg"],"C:\\Users\\Steven\\Documents\\GitHub\\spaceTourism\\assets\\image\\home\\background-home-mobile.jpg":[["background-home-mobile.e6851361.jpg","assets/image/home/background-home-mobile.jpg"],"assets/image/home/background-home-mobile.jpg"],"C:\\Users\\Steven\\Documents\\GitHub\\spaceTourism\\assets\\image\\home\\background-home-tablet.jpg":[["background-home-tablet.21b7f598.jpg","assets/image/home/background-home-tablet.jpg"],"assets/image/home/background-home-tablet.jpg"],"C:\\Users\\Steven\\Documents\\GitHub\\spaceTourism\\assets\\image\\home\\background-home-desktop.jpg":[["background-home-desktop.91957c8e.jpg","assets/image/home/background-home-desktop.jpg"],"assets/image/home/background-home-desktop.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -352,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","javaScript/header.js"], null)
-//# sourceMappingURL=/header.8a67c5b9.js.map
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/_home.48fc8d13.js.map

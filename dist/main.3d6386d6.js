@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"C:\\Users\\Steven\\Documents\\GitHub\\spaceTourism\\assets\\image\\shared\\icon-hamburger.svg":[["icon-hamburger.eb6e9105.svg","assets/image/shared/icon-hamburger.svg"],"assets/image/shared/icon-hamburger.svg"],"C:\\Users\\Steven\\Documents\\GitHub\\spaceTourism\\assets\\image\\shared\\icon-close.svg":[["icon-close.7dd67556.svg","assets/image/shared/icon-close.svg"],"assets/image/shared/icon-close.svg"],"C:\\Users\\Steven\\Documents\\GitHub\\spaceTourism\\assets\\image\\home\\background-home-mobile.jpg":[["background-home-mobile.e6851361.jpg","assets/image/home/background-home-mobile.jpg"],"assets/image/home/background-home-mobile.jpg"],"C:\\Users\\Steven\\Documents\\GitHub\\spaceTourism\\assets\\image\\home\\background-home-tablet.jpg":[["background-home-tablet.21b7f598.jpg","assets/image/home/background-home-tablet.jpg"],"assets/image/home/background-home-tablet.jpg"],"C:\\Users\\Steven\\Documents\\GitHub\\spaceTourism\\assets\\image\\home\\background-home-desktop.jpg":[["background-home-desktop.91957c8e.jpg","assets/image/home/background-home-desktop.jpg"],"assets/image/home/background-home-desktop.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62506" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61638" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
