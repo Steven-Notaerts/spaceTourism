@@ -520,7 +520,7 @@ body {
     text-align: left;
   }
 }
-.destination-travel-info__distance-destenation {
+.destination-travel-info__distance-destenition {
   text-align: center;
   color: #ffffff;
   font-family: "Bellefair", serif;
@@ -529,13 +529,13 @@ body {
   text-transform: uppercase;
 }
 @media (min-width: 30.0625rem) {
-  .destination-travel-info__distance-destenation {
+  .destination-travel-info__distance-destenition {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 @media (min-width: 64.0625rem) {
-  .destination-travel-info__distance-destenation {
+  .destination-travel-info__distance-destenition {
     text-align: left;
   }
 }
