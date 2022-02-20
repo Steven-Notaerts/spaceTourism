@@ -16,16 +16,13 @@ body {
   }
 
   @media (min-width: $larger-screen-1281) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }
 
 .main-destinations {
 }
 .destinations {
+  margin-inline: auto;
   top: 0;
   position: absolute;
   width: 100%;
@@ -35,21 +32,24 @@ body {
     margin-top: 8.5rem;
   }
   @media (min-width: $larger-screen-1281) {
-    border: 1px solid red;
     left: 0;
     width: 100%;
-    max-width: $max-container-width;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width: $max-body-width;
     margin-top: 13.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   &__container {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @media (min-width: $small-screen-481) {
+
+    @media (min-width: $larger-screen-1281) {
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -73,6 +73,12 @@ body {
     }
     @media (min-width: $larger-screen-1281) {
       padding-left: 10.406255rem;
+      width: 100%;
+      max-width: $max-container-width;
+      margin: 0 auto;
+      font-size: 1.75rem;
+      line-height: 2.125rem;
+      letter-spacing: 4.725px;
     }
   }
 
@@ -85,9 +91,15 @@ body {
     font-size: 1rem;
     line-height: 1.1875rem;
     letter-spacing: 2.7px;
+    font-weight: 700;
     @media (min-width: $small-screen-481) {
       font-size: 1.25rem;
       padding-right: 1.1875rem;
+    }
+    @media (min-width: $larger-screen-1281) {
+      font-size: 1.75rem;
+      line-height: 2.125rem;
+      padding-right: 1.75rem;
     }
   }
   &__planet-image-container {
@@ -109,6 +121,10 @@ body {
     @media (min-width: $small-screen-481) {
       width: 18.75rem;
       height: 18.75rem;
+    }
+    @media (min-width: $larger-screen-1281) {
+      width: 27.8125rem;
+      height: 27.8125rem;
     }
   }
 }
@@ -211,10 +227,6 @@ body {
   max-width: $max-container-width;
   display: flex;
   justify-content: center;
-  // @media (min-width: $small-screen-481) {
-  //   display: flex;
-  //   justify-content: space-evenly;
-  // }
 
   &__container {
     @media (min-width: $small-screen-481) {
@@ -289,4 +301,19 @@ body {
 .active-sub-nav {
   border-bottom: 3px solid $white;
   color: $white;
+}
+
+.desktop-wrapper {
+  @media (min-width: $large-screen-1025) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: $max-container-width;
+    margin: 0 auto;
+  }
+
+  &__sub-nav {
+    @media (min-width: $large-screen-1025) {
+    }
+  }
 }

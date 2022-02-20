@@ -229,16 +229,8 @@ body {
     overflow: hidden;
   }
 }
-@media (min-width: 80.0625rem) {
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
 .destinations {
+  margin-inline: auto;
   top: 0;
   position: absolute;
   width: 100%;
@@ -252,14 +244,14 @@ body {
 }
 @media (min-width: 80.0625rem) {
   .destinations {
-    border: 1px solid red;
     left: 0;
     width: 100%;
-    max-width: 1440px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width: 5000px;
     margin-top: 13.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 .destinations__container {
@@ -267,6 +259,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media (min-width: 80.0625rem) {
+  .destinations__container {
+    display: flex;
+    justify-content: center;
+  }
 }
 .destinations__sub-title {
   width: 100%;
@@ -288,6 +286,12 @@ body {
 @media (min-width: 80.0625rem) {
   .destinations__sub-title {
     padding-left: 10.406255rem;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    font-size: 1.75rem;
+    line-height: 2.125rem;
+    letter-spacing: 4.725px;
   }
 }
 .destinations__sub-title-number {
@@ -299,11 +303,19 @@ body {
   font-size: 1rem;
   line-height: 1.1875rem;
   letter-spacing: 2.7px;
+  font-weight: 700;
 }
 @media (min-width: 30.0625rem) {
   .destinations__sub-title-number {
     font-size: 1.25rem;
     padding-right: 1.1875rem;
+  }
+}
+@media (min-width: 80.0625rem) {
+  .destinations__sub-title-number {
+    font-size: 1.75rem;
+    line-height: 2.125rem;
+    padding-right: 1.75rem;
   }
 }
 .destinations__planet-image-container {
@@ -329,6 +341,12 @@ body {
   .destinations__planet-image {
     width: 18.75rem;
     height: 18.75rem;
+  }
+}
+@media (min-width: 80.0625rem) {
+  .destinations__planet-image {
+    width: 27.8125rem;
+    height: 27.8125rem;
   }
 }
 
@@ -507,6 +525,16 @@ body {
 .active-sub-nav {
   border-bottom: 3px solid #ffffff;
   color: #ffffff;
+}
+
+@media (min-width: 64.0625rem) {
+  .desktop-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=/_destinations.4b4c18bd.css.map */
