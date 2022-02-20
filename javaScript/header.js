@@ -14,7 +14,7 @@ navToggle.addEventListener("click", () => {
 });
 
 const activeLink = document.getElementsByClassName("navigation__link");
-console.log(activeLink);
+//console.log(activeLink);
 
 // for (let i = 0; i < activeLink.length; i++) {
 //   addEventListener("click", function (event) {
@@ -25,9 +25,10 @@ console.log(activeLink);
 //   });
 // }
 
-const addActiveClass = () => {
-  for (let i = 0; i < activeLink.length; i++) {
-    console.log(i);
-  }
-};
-activeLink.addEventListener("click", addActiveClass());
+// const addActiveClass = () => {
+//   //console.log(activeLink)
+//   // for (let i = 0; i < activeLink.length; i++) {
+//   //   console.log(activeLink[i]);
+//   // }
+// };
+// activeLink.addEventListener("click", addActiveClass());
