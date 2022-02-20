@@ -88,7 +88,8 @@
     backdrop-filter: blur(5rem);
   }
   @media (min-width: $larger-screen-1281) {
-    padding-right: 10.3125rem;
+    // padding-right: 10.3125rem;
+    padding-right: 5rem;
     position: absolute;
     right: 0;
     top: 0;

@@ -71,7 +71,7 @@ body {
       padding-left: 2.40625rem;
       font-size: 1.25rem;
     }
-    @media (min-width: $larger-screen-1281) {
+    @media (min-width: $large-screen-1025) {
       padding-left: 10.406255rem;
       width: 100%;
       max-width: $max-container-width;
@@ -122,6 +122,10 @@ body {
       width: 18.75rem;
       height: 18.75rem;
     }
+    @media (min-width: $large-screen-1025) {
+      margin-top: 4.0625rem;
+    }
+
     @media (min-width: $larger-screen-1281) {
       width: 27.8125rem;
       height: 27.8125rem;
@@ -138,6 +142,9 @@ body {
     width: 17.84375rem;
     height: 2.125rem;
   }
+  @media (min-width: $large-screen-1025) {
+    // justify-content: flex-start;
+  }
 
   &__container {
     width: 100%;
@@ -147,6 +154,10 @@ body {
     justify-content: center;
     @media (min-width: $small-screen-481) {
       margin-top: 2rem;
+    }
+    @media (min-width: $large-screen-1025) {
+      margin-top: 6.0625rem;
+      justify-content: flex-start;
     }
   }
   &__item {
@@ -200,6 +211,12 @@ body {
     text-align: center;
     text-transform: uppercase;
     margin: 0 auto;
+    @media (min-width: $large-screen-1025) {
+      text-align: left;
+      font-size: 6.25rem;
+      line-height: 7.1875rem;
+      margin-top: 2.3125rem;
+    }
   }
 
   &__description {
@@ -218,6 +235,12 @@ body {
       line-height: 1.75rem;
       font-size: 1rem;
     }
+    @media (min-width: $large-screen-1025) {
+      text-align: left;
+      margin: 0;
+      line-height: 2rem;
+      font-size: 1.125rem;
+    }
   }
 }
 
@@ -233,10 +256,17 @@ body {
       display: flex;
       justify-content: space-evenly;
       width: 573px;
+      @media (min-width: $large-screen-1025) {
+        justify-content: flex-start;
+      }
     }
   }
   &__distance {
     margin-bottom: 2rem;
+    @media (min-width: $large-screen-1025) {
+      text-align: left;
+      margin-right: 4.9375rem;
+    }
   }
 
   &__distance-header {
@@ -252,8 +282,11 @@ body {
       font-size: 0.875rem;
       line-height: 1.0625rem;
     }
+    @media (min-width: $large-screen-1025) {
+      text-align: left;
+    }
   }
-  &__distance {
+  &__distance-destenation {
     text-align: center;
     color: $white;
     font-family: $font-bellefair;
@@ -263,6 +296,9 @@ body {
     @media (min-width: $small-screen-481) {
       font-size: 1.75rem;
       line-height: 2rem;
+    }
+    @media (min-width: $large-screen-1025) {
+      text-align: left;
     }
   }
 
@@ -282,6 +318,9 @@ body {
       font-size: 0.875rem;
       line-height: 1.0625rem;
     }
+    @media (min-width: $large-screen-1025) {
+      text-align: left;
+    }
   }
 
   &__travel-time {
@@ -294,6 +333,9 @@ body {
     @media (min-width: $small-screen-481) {
       font-size: 1.75rem;
       line-height: 2rem;
+    }
+    @media (min-width: $large-screen-1025) {
+      text-align: left;
     }
   }
 }
@@ -314,6 +356,9 @@ body {
 
   &__sub-nav {
     @media (min-width: $large-screen-1025) {
+      width: 27.8125rem;
+      height: 29.5rem;
+      text-align: left;
     }
   }
 }
