@@ -16,7 +16,11 @@
 @media (min-width: 80.0625rem) {
   .header {
     margin-top: 2.5rem;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.04) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 25%,
+      rgba(255, 255, 255, 0.04) 100%
+    );
     backdrop-filter: blur(5rem);
   }
 }
@@ -62,7 +66,7 @@
     z-index: 9999;
   }
 }
-.header__toggle-menu-btn[aria-expanded=true] {
+.header__toggle-menu-btn[aria-expanded="true"] {
   background-image: url("/icon-close.7dd67556.svg");
 }
 @media (min-width: 30.0625rem) {
@@ -171,7 +175,7 @@
     display: none;
   }
 }
-.navigation[data-visible=true] {
+.navigation[data-visible="true"] {
   transform: translateX(0%);
 }
 

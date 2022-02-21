@@ -263,6 +263,7 @@ body {
   }
   &__distance {
     margin-bottom: 2rem;
+
     @media (min-width: $large-screen-1025) {
       text-align: left;
       margin-right: 4.9375rem;
@@ -286,13 +287,14 @@ body {
       text-align: left;
     }
   }
-  &__distance-destenition {
+  &__distance-destination {
     text-align: center;
     color: $white;
     font-family: $font-bellefair;
     font-size: 1.75rem;
     line-height: 2rem;
     text-transform: uppercase;
+    margin-bottom: 2rem;
     @media (min-width: $small-screen-481) {
       font-size: 1.75rem;
       line-height: 2rem;
