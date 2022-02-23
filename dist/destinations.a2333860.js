@@ -214,7 +214,7 @@ module.exports = {
 };
 },{}],"javaScript/destinations.js":[function(require,module,exports) {
 //little test to see if js file is connected to html
-console.log("test"); //import via destuctering only destinations data
+console.log("test"); //import via destructering only destinations data
 
 var _require = require('../utils/data.json'),
     destinations = _require.destinations; //console.log(destinations);
