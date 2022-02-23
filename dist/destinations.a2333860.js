@@ -217,11 +217,70 @@ module.exports = {
 console.log("test"); //import via destuctering only destinations data
 
 var _require = require('../utils/data.json'),
-    destinations = _require.destinations;
+    destinations = _require.destinations; //console.log(destinations);
+// destinations.forEach((destination) =>{
+//     console.log(destination)
+//     const subMenuButtons = document.querySelectorAll(".sub-nav__button")
+//     console.log(subMenuButtons)
+//     const mainDestinationTitle = document.querySelectorAll(".destination-info__main-title")[0]
+//     console.log(destination)
+//     subMenuButtons.addEventListener("click", function(){
+//     if(subMenuButton.classList.contains("moon")){
+//         console.log("moon")
+//         mainDestinationTitle.innerHTML = "moon"
+//     }
+//      if(subMenuButton.classList.contains("mars")){
+//         console.log("mars")
+//         mainDestinationTitle.innerHTML = "mars"
+//     }
+//      if(subMenuButton.classList.contains("europa")){
+//         console.log("europa")
+//          mainDestinationTitle.innerHTML = "europa"
+//     }
+//      if(subMenuButton.classList.contains("titan")){
+//           console.log("titan")
+//          mainDestinationTitle.innerHTML = "titan"
+//     }
+// })
+// }
+// )
 
-console.log(destinations);
-destinations.forEach(function (destination) {
-  console.log(destination);
+
+var subMenuButtons = document.querySelectorAll(".sub-nav__button");
+console.log(subMenuButtons);
+var mainDestinationTitle = document.querySelectorAll(".destination-info__main-title")[0];
+console.log(mainDestinationTitle.innerHTML);
+subMenuButtons.forEach(function (subMenuButton) {
+  console.log(destinations); // destinations.forEach((destination) => {
+  //     console.log(destination)
+  // })
+
+  subMenuButton.addEventListener("click", function () {
+    if (subMenuButton.classList.contains("moon")) {
+      console.log("moon"); //mainDestinationTitle.innerHTML = "moon"
+      //test
+
+      mainDestinationTitle.innerHTML = "moon";
+    }
+
+    if (subMenuButton.classList.contains("mars")) {
+      console.log("mars"); //test
+
+      mainDestinationTitle.innerHTML = "mars";
+    }
+
+    if (subMenuButton.classList.contains("europa")) {
+      console.log("europa"); //test
+
+      mainDestinationTitle.innerHTML = "europa";
+    }
+
+    if (subMenuButton.classList.contains("titan")) {
+      console.log("titan"); //test
+
+      mainDestinationTitle.innerHTML = "titan";
+    }
+  });
 });
 },{"../utils/data.json":"utils/data.json"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -251,7 +310,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57900" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49253" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
