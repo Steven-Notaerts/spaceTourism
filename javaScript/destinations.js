@@ -2,78 +2,70 @@
 console.log("test")
 //import via destructering only destinations data
 const {destinations} = require('../utils/data.json');
-//console.log(destinations);
-
-// destinations.forEach((destination) =>{
-//     console.log(destination)
-
-//     const subMenuButtons = document.querySelectorAll(".sub-nav__button")
-//     console.log(subMenuButtons)
-//     const mainDestinationTitle = document.querySelectorAll(".destination-info__main-title")[0]
-//     console.log(destination)
-//     subMenuButtons.addEventListener("click", function(){
-//     if(subMenuButton.classList.contains("moon")){
-//         console.log("moon")
-//         mainDestinationTitle.innerHTML = "moon"
-//     }
-
-//      if(subMenuButton.classList.contains("mars")){
-//         console.log("mars")
-//         mainDestinationTitle.innerHTML = "mars"
-//     }
-//      if(subMenuButton.classList.contains("europa")){
-//         console.log("europa")
-//          mainDestinationTitle.innerHTML = "europa"
-//     }
-
-//      if(subMenuButton.classList.contains("titan")){
-//           console.log("titan")
-//          mainDestinationTitle.innerHTML = "titan"
-//     }
-
-// })
-// }
-// )
-
+console.log(destinations);
 
 const subMenuButtons = document.querySelectorAll(".sub-nav__button")
 console.log(subMenuButtons)
 const mainDestinationTitle = document.querySelectorAll(".destination-info__main-title")[0]
-console.log(mainDestinationTitle.innerHTML)
-subMenuButtons.forEach((subMenuButton) => {
-    console.log(destinations)
-    // destinations.forEach((destination) => {
-    //     console.log(destination)
-    // })
+const mainDestinationDescription = document.querySelectorAll(".destination-info__description")[0]
+const mainDestinationDistance = document.querySelectorAll(".destination-travel-info__distance-destination")[0]
+const mainDestinationDTravelTime = document.querySelectorAll(".destination-travel-info__travel-time")[0]
+
+subMenuButtons.forEach((subMenuButton) =>{
 
     subMenuButton.addEventListener("click", function(){
-    if(subMenuButton.classList.contains("moon")){
-        console.log("moon")
-        //mainDestinationTitle.innerHTML = "moon"
-        //test
-        mainDestinationTitle.innerHTML = "moon"
+    
+        if(subMenuButton.classList.contains("moon")){
+        console.log("moon");        
+        mainDestinationTitle.innerHTML = `${destinations[0].name}`;
+        mainDestinationDescription.innerHTML = `${destinations[0].description}`;
+        mainDestinationDistance.innerHTML= `${destinations[0].distance}`;
+        mainDestinationDTravelTime.innerHTML = `${destinations[0].travel}`;
+     //   subMenuButton.classList.add("active-sub-nav")
+        
     }
-
-     if(subMenuButton.classList.contains("mars")){
-        console.log("mars")
-        //test
-        mainDestinationTitle.innerHTML = "mars"
+    if(subMenuButton.classList.contains("mars")){
+        console.log("mars");
+        mainDestinationTitle.innerHTML = `${destinations[1].name}`;
+        mainDestinationDescription.innerHTML = `${destinations[1].description}`;
+        mainDestinationDistance.innerHTML= `${destinations[1].distance}`;
+        mainDestinationDTravelTime.innerHTML = `${destinations[1].travel}`;
+       // subMenuButton.classList.add("active-sub-nav")
+     
     }
-     if(subMenuButton.classList.contains("europa")){
-        console.log("europa")
-        //test
-         mainDestinationTitle.innerHTML = "europa"
+    if(subMenuButton.classList.contains("europa")){
+        console.log("europa");
+        mainDestinationTitle.innerHTML = `${destinations[2].name}`;
+        mainDestinationDescription.innerHTML = `${destinations[2].description}`;
+        mainDestinationDistance.innerHTML= `${destinations[2].distance}`;
+        mainDestinationDTravelTime.innerHTML = `${destinations[2].travel}`;
+     //   subMenuButton.classList.add("active-sub-nav")
+        
     }
-
-     if(subMenuButton.classList.contains("titan")){
-          console.log("titan")
-          //test
-         mainDestinationTitle.innerHTML = "titan"
+    if(subMenuButton.classList.contains("titan")){
+        console.log("titan");
+        mainDestinationTitle.innerHTML = `${destinations[3].name}`;
+        mainDestinationDescription.innerHTML = `${destinations[3].description}`;
+        mainDestinationDistance.innerHTML= `${destinations[3].distance}`;
+        mainDestinationDTravelTime.innerHTML = `${destinations[3].travel}`;
+      //  subMenuButton.classList.add("active-sub-nav")
+     
     }
+    })
 })
+//}
+// )
+//1. selecteer de sub menu's buttons op de DOM
+//2. op button click de classlist checken
+//3. als classlist overeenkomt met een waarde in de array de inner html veranderen naar de waardes in de array
+//4.
+//5.
+//6.
 
-})
-
-
-
+const removeClasslist = () => {
+    const subMenuButtonsClasslist = document.querySelectorAll(".sub-nav__button")
+    subMenuButtons.forEach((button) => {
+        button.classList.remove("active-sub-nav")
+    })
+}
 
