@@ -163,13 +163,13 @@
 }
 
 @media (max-width: $small-screen-481) {
-  .active {
+  .active-main {
     border-right: 4px solid $white;
     height: 1.9375rem;
   }
 }
 @media (min-width: $small-screen-481) {
-  .active {
+  .active-main {
     border-right: 0;
     // height: 6rem;
     border-bottom: 3px solid $white;

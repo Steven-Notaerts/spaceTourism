@@ -13,22 +13,15 @@ navToggle.addEventListener("click", () => {
   }
 });
 
-const activeLink = document.getElementsByClassName("navigation__link");
-//console.log(activeLink);
-
-// for (let i = 0; i < activeLink.length; i++) {
-//   addEventListener("click", function (event) {
-//     event.preventDefault();
-//     if (activeLink) {
-//       console.log("ok" + activeLink[i].textContent);
-//     }
-//   });
-// }
-
-// const addActiveClass = () => {
-//   //console.log(activeLink)
-//   // for (let i = 0; i < activeLink.length; i++) {
-//   //   console.log(activeLink[i]);
-//   // }
-// };
-// activeLink.addEventListener("click", addActiveClass());
+const mainNavigationButtons = document.querySelectorAll(".navigation__link");
+console.log(mainNavigationButtons)
+mainNavigationButtons.forEach((mainNavigationButton) => {
+console.log(mainNavigationButton)
+  mainNavigationButton.addEventListener("click", function(){
+    mainNavigationButtons.forEach((mainButton) => {
+       mainButton.classList.remove('active-main');
+     this.classList.add('active-main');
+    })
+   
+  })
+})

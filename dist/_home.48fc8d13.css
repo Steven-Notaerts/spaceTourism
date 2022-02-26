@@ -182,13 +182,13 @@
 }
 
 @media (max-width: 30.0625rem) {
-  .active {
+  .active-main {
     border-right: 4px solid #ffffff;
     height: 1.9375rem;
   }
 }
 @media (min-width: 30.0625rem) {
-  .active {
+  .active-main {
     border-right: 0;
     border-bottom: 3px solid #ffffff;
   }

@@ -15,63 +15,48 @@ console.log(mainDestinationsImage.src)
 
 subMenuButtons.forEach((subMenuButton) =>{
 
+
     subMenuButton.addEventListener("click", function(){
-    
-        if(subMenuButton.classList.contains("moon")){
-        console.log("moon");        
+        //sub navigatie wanneer er op geklikt word op elke button de classlist verwijderd, 
+        //en op de active (this) de claslist toegevoegd.
+        subMenuButtons.forEach((subButton) => {
+        subButton.classList.remove('active-sub-nav');
+        this.classList.add('active-sub-nav');
+       })
+
+        if(subMenuButton.classList.contains("moon")){       
         mainDestinationTitle.innerHTML = `${destinations[0].name}`;
         mainDestinationDescription.innerHTML = `${destinations[0].description}`;
         mainDestinationDistance.innerHTML= `${destinations[0].distance}`;
         mainDestinationTravelTime.innerHTML = `${destinations[0].travel}`;
-        mainDestinationsImage.src = `${destinations[0].images.webp}`;
-     //   subMenuButton.classList.add("active-sub-nav")
-        
+        mainDestinationsImage.src = require(`${destinations[0].images.webp}`);
+      
     }
     if(subMenuButton.classList.contains("mars")){
-        console.log("mars");
         mainDestinationTitle.innerHTML = `${destinations[1].name}`;
         mainDestinationDescription.innerHTML = `${destinations[1].description}`;
         mainDestinationDistance.innerHTML= `${destinations[1].distance}`;
         mainDestinationTravelTime.innerHTML = `${destinations[1].travel}`;
         mainDestinationsImage.src = `${destinations[1].images.webp}`;
-        //"../assets/image/destination/image-moon.webp"
-           console.log(mainDestinationsImage)
-       // subMenuButton.classList.add("active-sub-nav")
      
     }
     if(subMenuButton.classList.contains("europa")){
-        console.log("europa");
         mainDestinationTitle.innerHTML = `${destinations[2].name}`;
         mainDestinationDescription.innerHTML = `${destinations[2].description}`;
         mainDestinationDistance.innerHTML= `${destinations[2].distance}`;
         mainDestinationTravelTime.innerHTML = `${destinations[2].travel}`;
-     //   subMenuButton.classList.add("active-sub-nav")
+  
         
     }
     if(subMenuButton.classList.contains("titan")){
-        console.log("titan");
         mainDestinationTitle.innerHTML = `${destinations[3].name}`;
         mainDestinationDescription.innerHTML = `${destinations[3].description}`;
         mainDestinationDistance.innerHTML= `${destinations[3].distance}`;
         mainDestinationTravelTime.innerHTML = `${destinations[3].travel}`;
-      //  subMenuButton.classList.add("active-sub-nav")
+      
      
     }
     })
 })
-//}
-// )
-//1. selecteer de sub menu's buttons op de DOM
-//2. op button click de classlist checken
-//3. als classlist overeenkomt met een waarde in de array de inner html veranderen naar de waardes in de array
-//4.
-//5.
-//6.
 
-const removeClasslist = () => {
-    const subMenuButtonsClasslist = document.querySelectorAll(".sub-nav__button")
-    subMenuButtons.forEach((button) => {
-        button.classList.remove("active-sub-nav")
-    })
-}
 

@@ -122,8 +122,8 @@ module.exports = {
   "destinations": [{
     "name": "Moon",
     "images": {
-      "png": "../assets/image/destination/image-moon.png",
-      "webp": "../assets/image/destination/image-moon.webp"
+      "png": "./assets/image/destination/image-moon.png",
+      "webp": "./assets/image/destination/image-moon.webp"
     },
     "description": "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
     "distance": "384,400 km",
@@ -131,8 +131,8 @@ module.exports = {
   }, {
     "name": "Mars",
     "images": {
-      "png": "/assets/image/destination/image-mars.png",
-      "webp": "/assets/image/destination/image-mars.webp"
+      "png": "./assets/image/destination/image-mars.png",
+      "webp": "./assets/image/destination/image-mars.webp"
     },
     "description": "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!",
     "distance": "225 mil. km",
@@ -230,57 +230,47 @@ var mainDestinationsImage = document.querySelectorAll(".destinations__planet-ima
 console.log(mainDestinationsImage.src);
 subMenuButtons.forEach(function (subMenuButton) {
   subMenuButton.addEventListener("click", function () {
+    var _this = this;
+
+    //sub navigatie wanneer er op geklikt word op elke button de classlist verwijderd, 
+    //en op de active (this) de claslist toegevoegd.
+    subMenuButtons.forEach(function (subButton) {
+      subButton.classList.remove('active-sub-nav');
+
+      _this.classList.add('active-sub-nav');
+    });
+
     if (subMenuButton.classList.contains("moon")) {
-      console.log("moon");
       mainDestinationTitle.innerHTML = "".concat(destinations[0].name);
       mainDestinationDescription.innerHTML = "".concat(destinations[0].description);
       mainDestinationDistance.innerHTML = "".concat(destinations[0].distance);
       mainDestinationTravelTime.innerHTML = "".concat(destinations[0].travel);
-      mainDestinationsImage.src = "".concat(destinations[0].images.webp); //   subMenuButton.classList.add("active-sub-nav")
+      mainDestinationsImage.src = require("".concat(destinations[0].images.webp));
     }
 
     if (subMenuButton.classList.contains("mars")) {
-      console.log("mars");
       mainDestinationTitle.innerHTML = "".concat(destinations[1].name);
       mainDestinationDescription.innerHTML = "".concat(destinations[1].description);
       mainDestinationDistance.innerHTML = "".concat(destinations[1].distance);
       mainDestinationTravelTime.innerHTML = "".concat(destinations[1].travel);
-      mainDestinationsImage.src = "".concat(destinations[1].images.webp); //"../assets/image/destination/image-moon.webp"
-
-      console.log(mainDestinationsImage); // subMenuButton.classList.add("active-sub-nav")
+      mainDestinationsImage.src = "".concat(destinations[1].images.webp);
     }
 
     if (subMenuButton.classList.contains("europa")) {
-      console.log("europa");
       mainDestinationTitle.innerHTML = "".concat(destinations[2].name);
       mainDestinationDescription.innerHTML = "".concat(destinations[2].description);
       mainDestinationDistance.innerHTML = "".concat(destinations[2].distance);
-      mainDestinationTravelTime.innerHTML = "".concat(destinations[2].travel); //   subMenuButton.classList.add("active-sub-nav")
+      mainDestinationTravelTime.innerHTML = "".concat(destinations[2].travel);
     }
 
     if (subMenuButton.classList.contains("titan")) {
-      console.log("titan");
       mainDestinationTitle.innerHTML = "".concat(destinations[3].name);
       mainDestinationDescription.innerHTML = "".concat(destinations[3].description);
       mainDestinationDistance.innerHTML = "".concat(destinations[3].distance);
-      mainDestinationTravelTime.innerHTML = "".concat(destinations[3].travel); //  subMenuButton.classList.add("active-sub-nav")
+      mainDestinationTravelTime.innerHTML = "".concat(destinations[3].travel);
     }
   });
-}); //}
-// )
-//1. selecteer de sub menu's buttons op de DOM
-//2. op button click de classlist checken
-//3. als classlist overeenkomt met een waarde in de array de inner html veranderen naar de waardes in de array
-//4.
-//5.
-//6.
-
-var removeClasslist = function removeClasslist() {
-  var subMenuButtonsClasslist = document.querySelectorAll(".sub-nav__button");
-  subMenuButtons.forEach(function (button) {
-    button.classList.remove("active-sub-nav");
-  });
-};
+});
 },{"../utils/data.json":"utils/data.json"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -309,7 +299,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60242" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49405" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

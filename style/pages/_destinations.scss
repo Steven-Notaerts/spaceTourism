@@ -345,6 +345,7 @@ body {
 .active-sub-nav {
   border-bottom: 3px solid $white;
   color: $white;
+  z-index: 10;
 }
 
 .desktop-wrapper {
