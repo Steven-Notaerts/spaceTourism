@@ -7,11 +7,16 @@
     "dev": "parcel ./index.html",
     "build": "parcel build ./index.html"
   },
+  "staticFiles": {
+        "staticPath": "assets",
+        "watcherGlob": "**"
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.15",
+    "parcel-plugin-static-files-copy": "^2.6.0",
     "sass": "^1.49.0"
   },
   "dependencies": {

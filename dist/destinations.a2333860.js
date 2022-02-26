@@ -219,15 +219,15 @@ console.log("test"); //import via destructering only destinations data
 var _require = require('../utils/data.json'),
     destinations = _require.destinations;
 
-console.log(destinations[0].images.webp);
+console.log(destinations[0].images);
 var subMenuButtons = document.querySelectorAll(".sub-nav__button");
 console.log(subMenuButtons);
 var mainDestinationTitle = document.querySelectorAll(".destination-info__main-title")[0];
 var mainDestinationDescription = document.querySelectorAll(".destination-info__description")[0];
 var mainDestinationDistance = document.querySelectorAll(".destination-travel-info__distance-destination")[0];
 var mainDestinationTravelTime = document.querySelectorAll(".destination-travel-info__travel-time")[0];
-var mainDestinationsImage = document.querySelector(".destinations__planet-image");
-console.log(mainDestinationsImage.src);
+var mainDestinationsImage = document.querySelectorAll(".destinations__planet-image").currentSrc; //console.log(mainDestinationsImage)
+
 subMenuButtons.forEach(function (subMenuButton) {
   subMenuButton.addEventListener("click", function () {
     var _this = this;
@@ -244,26 +244,28 @@ subMenuButtons.forEach(function (subMenuButton) {
       mainDestinationTitle.innerHTML = "".concat(destinations[0].name);
       mainDestinationDescription.innerHTML = "".concat(destinations[0].description);
       mainDestinationDistance.innerHTML = "".concat(destinations[0].distance);
-      mainDestinationTravelTime.innerHTML = "".concat(destinations[0].travel);
-      mainDestinationsImage.src = "".concat(destinations[0].images.webp);
-      console.log(mainDestinationsImage.src);
+      mainDestinationTravelTime.innerHTML = "".concat(destinations[0].travel); // mainDestinationsImage.src = `${destinations[0].images.webp}`;     
+      //console.log(mainDestinationsImage);   
+
+      document.querySelector(".destinations__planet-image").setAttribute("src", "".concat(destinations[0].images.webp));
     }
 
     if (subMenuButton.classList.contains("mars")) {
       mainDestinationTitle.innerHTML = "".concat(destinations[1].name);
       mainDestinationDescription.innerHTML = "".concat(destinations[1].description);
       mainDestinationDistance.innerHTML = "".concat(destinations[1].distance);
-      mainDestinationTravelTime.innerHTML = "".concat(destinations[1].travel);
-      mainDestinationsImage.src = '../../assets/image/destination/image-mars.webp';
-      console.log(mainDestinationsImage);
+      mainDestinationTravelTime.innerHTML = "".concat(destinations[1].travel); // mainDestinationsImage.src = '../assets/image/destination/image-mars.webp';   
+      //  console.log(mainDestinationsImage);  
+
+      document.querySelector(".destinations__planet-image").setAttribute("src", './assets/image/destination/image-mars.webp');
     }
 
     if (subMenuButton.classList.contains("europa")) {
       mainDestinationTitle.innerHTML = "".concat(destinations[2].name);
       mainDestinationDescription.innerHTML = "".concat(destinations[2].description);
       mainDestinationDistance.innerHTML = "".concat(destinations[2].distance);
-      mainDestinationTravelTime.innerHTML = "".concat(destinations[2].travel);
-      console.log(mainDestinationsImage.src);
+      mainDestinationTravelTime[0] = "".concat(destinations[2].travel);
+      console.log(mainDestinationsImage);
     }
 
     if (subMenuButton.classList.contains("titan")) {
@@ -303,7 +305,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60327" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60950" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
