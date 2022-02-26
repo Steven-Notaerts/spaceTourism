@@ -2,7 +2,7 @@
 console.log("test")
 //import via destructering only destinations data
 const {destinations} = require('../utils/data.json');
-console.log(destinations);
+console.log(destinations[0].images.webp);
 
 const subMenuButtons = document.querySelectorAll(".sub-nav__button")
 console.log(subMenuButtons)
@@ -10,7 +10,7 @@ const mainDestinationTitle = document.querySelectorAll(".destination-info__main-
 const mainDestinationDescription = document.querySelectorAll(".destination-info__description")[0]
 const mainDestinationDistance = document.querySelectorAll(".destination-travel-info__distance-destination")[0]
 const mainDestinationTravelTime = document.querySelectorAll(".destination-travel-info__travel-time")[0]
-const mainDestinationsImage = document.querySelectorAll(".destinations__planet-image")[0]
+const mainDestinationsImage = document.querySelector(".destinations__planet-image")
 console.log(mainDestinationsImage.src)
 
 subMenuButtons.forEach((subMenuButton) =>{
@@ -29,31 +29,30 @@ subMenuButtons.forEach((subMenuButton) =>{
         mainDestinationDescription.innerHTML = `${destinations[0].description}`;
         mainDestinationDistance.innerHTML= `${destinations[0].distance}`;
         mainDestinationTravelTime.innerHTML = `${destinations[0].travel}`;
-        mainDestinationsImage.src = require(`${destinations[0].images.webp}`);
-      
+        mainDestinationsImage.src = `${destinations[0].images.webp}`;     
+        console.log(mainDestinationsImage.src);   
     }
     if(subMenuButton.classList.contains("mars")){
         mainDestinationTitle.innerHTML = `${destinations[1].name}`;
         mainDestinationDescription.innerHTML = `${destinations[1].description}`;
         mainDestinationDistance.innerHTML= `${destinations[1].distance}`;
         mainDestinationTravelTime.innerHTML = `${destinations[1].travel}`;
-        mainDestinationsImage.src = `${destinations[1].images.webp}`;
-     
+        mainDestinationsImage.src = '../../assets/image/destination/image-mars.webp';   
+        console.log(mainDestinationsImage);  
     }
     if(subMenuButton.classList.contains("europa")){
         mainDestinationTitle.innerHTML = `${destinations[2].name}`;
         mainDestinationDescription.innerHTML = `${destinations[2].description}`;
         mainDestinationDistance.innerHTML= `${destinations[2].distance}`;
-        mainDestinationTravelTime.innerHTML = `${destinations[2].travel}`;
-  
-        
+        mainDestinationTravelTime.innerHTML = `${destinations[2].travel}`;      
+        console.log(mainDestinationsImage.src);   
     }
     if(subMenuButton.classList.contains("titan")){
         mainDestinationTitle.innerHTML = `${destinations[3].name}`;
         mainDestinationDescription.innerHTML = `${destinations[3].description}`;
         mainDestinationDistance.innerHTML= `${destinations[3].distance}`;
-        mainDestinationTravelTime.innerHTML = `${destinations[3].travel}`;
-      
+        mainDestinationTravelTime.innerHTML = `${destinations[3].travel}`; 
+        console.log(mainDestinationsImage.src);      
      
     }
     })
