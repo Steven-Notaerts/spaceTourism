@@ -122,8 +122,8 @@ module.exports = {
   "destinations": [{
     "name": "Moon",
     "images": {
-      "png": "./assets/destination/image-moon.png",
-      "webp": "./assets/destination/image-moon.webp"
+      "png": "../assets/image/destination/image-moon.png",
+      "webp": "../assets/image/destination/image-moon.webp"
     },
     "description": "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
     "distance": "384,400 km",
@@ -131,8 +131,8 @@ module.exports = {
   }, {
     "name": "Mars",
     "images": {
-      "png": "./assets/destination/image-mars.png",
-      "webp": "./assets/destination/image-mars.webp"
+      "png": "../assets/image/destination/image-mars.png",
+      "webp": "../assets/image/destination/image-mars.webp"
     },
     "description": "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!",
     "distance": "225 mil. km",
@@ -140,8 +140,8 @@ module.exports = {
   }, {
     "name": "Europa",
     "images": {
-      "png": "./assets/destination/image-europa.png",
-      "webp": "./assets/destination/image-europa.webp"
+      "png": "../assets/image/destination/image-europa.png",
+      "webp": "../assets/image/destination/image-europa.webp"
     },
     "description": "The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.",
     "distance": "628 mil. km",
@@ -149,8 +149,8 @@ module.exports = {
   }, {
     "name": "Titan",
     "images": {
-      "png": "./assets/destination/image-titan.png",
-      "webp": "./assets/destination/image-titan.webp"
+      "png": "../assets/image/destination/image-titan.png",
+      "webp": "../assets/image/destination/image-titan.webp"
     },
     "description": "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
     "distance": "1.6 bil. km",
@@ -225,7 +225,9 @@ console.log(subMenuButtons);
 var mainDestinationTitle = document.querySelectorAll(".destination-info__main-title")[0];
 var mainDestinationDescription = document.querySelectorAll(".destination-info__description")[0];
 var mainDestinationDistance = document.querySelectorAll(".destination-travel-info__distance-destination")[0];
-var mainDestinationDTravelTime = document.querySelectorAll(".destination-travel-info__travel-time")[0];
+var mainDestinationTravelTime = document.querySelectorAll(".destination-travel-info__travel-time")[0];
+var mainDestinationsImage = document.querySelectorAll(".destinations__planet-image")[0];
+console.log(mainDestinationsImage.src);
 subMenuButtons.forEach(function (subMenuButton) {
   subMenuButton.addEventListener("click", function () {
     if (subMenuButton.classList.contains("moon")) {
@@ -233,7 +235,8 @@ subMenuButtons.forEach(function (subMenuButton) {
       mainDestinationTitle.innerHTML = "".concat(destinations[0].name);
       mainDestinationDescription.innerHTML = "".concat(destinations[0].description);
       mainDestinationDistance.innerHTML = "".concat(destinations[0].distance);
-      mainDestinationDTravelTime.innerHTML = "".concat(destinations[0].travel); //   subMenuButton.classList.add("active-sub-nav")
+      mainDestinationTravelTime.innerHTML = "".concat(destinations[0].travel);
+      mainDestinationsImage.src = "".concat(destinations[0].images.webp); //   subMenuButton.classList.add("active-sub-nav")
     }
 
     if (subMenuButton.classList.contains("mars")) {
@@ -241,7 +244,10 @@ subMenuButtons.forEach(function (subMenuButton) {
       mainDestinationTitle.innerHTML = "".concat(destinations[1].name);
       mainDestinationDescription.innerHTML = "".concat(destinations[1].description);
       mainDestinationDistance.innerHTML = "".concat(destinations[1].distance);
-      mainDestinationDTravelTime.innerHTML = "".concat(destinations[1].travel); // subMenuButton.classList.add("active-sub-nav")
+      mainDestinationTravelTime.innerHTML = "".concat(destinations[1].travel);
+      mainDestinationsImage.src = "".concat(destinations[1].images.webp); //"../assets/image/destination/image-moon.webp"
+
+      console.log(mainDestinationsImage); // subMenuButton.classList.add("active-sub-nav")
     }
 
     if (subMenuButton.classList.contains("europa")) {
@@ -249,7 +255,7 @@ subMenuButtons.forEach(function (subMenuButton) {
       mainDestinationTitle.innerHTML = "".concat(destinations[2].name);
       mainDestinationDescription.innerHTML = "".concat(destinations[2].description);
       mainDestinationDistance.innerHTML = "".concat(destinations[2].distance);
-      mainDestinationDTravelTime.innerHTML = "".concat(destinations[2].travel); //   subMenuButton.classList.add("active-sub-nav")
+      mainDestinationTravelTime.innerHTML = "".concat(destinations[2].travel); //   subMenuButton.classList.add("active-sub-nav")
     }
 
     if (subMenuButton.classList.contains("titan")) {
@@ -257,7 +263,7 @@ subMenuButtons.forEach(function (subMenuButton) {
       mainDestinationTitle.innerHTML = "".concat(destinations[3].name);
       mainDestinationDescription.innerHTML = "".concat(destinations[3].description);
       mainDestinationDistance.innerHTML = "".concat(destinations[3].distance);
-      mainDestinationDTravelTime.innerHTML = "".concat(destinations[3].travel); //  subMenuButton.classList.add("active-sub-nav")
+      mainDestinationTravelTime.innerHTML = "".concat(destinations[3].travel); //  subMenuButton.classList.add("active-sub-nav")
     }
   });
 }); //}
@@ -303,7 +309,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51140" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60242" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

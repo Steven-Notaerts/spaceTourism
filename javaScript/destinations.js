@@ -9,7 +9,9 @@ console.log(subMenuButtons)
 const mainDestinationTitle = document.querySelectorAll(".destination-info__main-title")[0]
 const mainDestinationDescription = document.querySelectorAll(".destination-info__description")[0]
 const mainDestinationDistance = document.querySelectorAll(".destination-travel-info__distance-destination")[0]
-const mainDestinationDTravelTime = document.querySelectorAll(".destination-travel-info__travel-time")[0]
+const mainDestinationTravelTime = document.querySelectorAll(".destination-travel-info__travel-time")[0]
+const mainDestinationsImage = document.querySelectorAll(".destinations__planet-image")[0]
+console.log(mainDestinationsImage.src)
 
 subMenuButtons.forEach((subMenuButton) =>{
 
@@ -20,7 +22,8 @@ subMenuButtons.forEach((subMenuButton) =>{
         mainDestinationTitle.innerHTML = `${destinations[0].name}`;
         mainDestinationDescription.innerHTML = `${destinations[0].description}`;
         mainDestinationDistance.innerHTML= `${destinations[0].distance}`;
-        mainDestinationDTravelTime.innerHTML = `${destinations[0].travel}`;
+        mainDestinationTravelTime.innerHTML = `${destinations[0].travel}`;
+        mainDestinationsImage.src = `${destinations[0].images.webp}`;
      //   subMenuButton.classList.add("active-sub-nav")
         
     }
@@ -29,7 +32,10 @@ subMenuButtons.forEach((subMenuButton) =>{
         mainDestinationTitle.innerHTML = `${destinations[1].name}`;
         mainDestinationDescription.innerHTML = `${destinations[1].description}`;
         mainDestinationDistance.innerHTML= `${destinations[1].distance}`;
-        mainDestinationDTravelTime.innerHTML = `${destinations[1].travel}`;
+        mainDestinationTravelTime.innerHTML = `${destinations[1].travel}`;
+        mainDestinationsImage.src = `${destinations[1].images.webp}`;
+        //"../assets/image/destination/image-moon.webp"
+           console.log(mainDestinationsImage)
        // subMenuButton.classList.add("active-sub-nav")
      
     }
@@ -38,7 +44,7 @@ subMenuButtons.forEach((subMenuButton) =>{
         mainDestinationTitle.innerHTML = `${destinations[2].name}`;
         mainDestinationDescription.innerHTML = `${destinations[2].description}`;
         mainDestinationDistance.innerHTML= `${destinations[2].distance}`;
-        mainDestinationDTravelTime.innerHTML = `${destinations[2].travel}`;
+        mainDestinationTravelTime.innerHTML = `${destinations[2].travel}`;
      //   subMenuButton.classList.add("active-sub-nav")
         
     }
@@ -47,7 +53,7 @@ subMenuButtons.forEach((subMenuButton) =>{
         mainDestinationTitle.innerHTML = `${destinations[3].name}`;
         mainDestinationDescription.innerHTML = `${destinations[3].description}`;
         mainDestinationDistance.innerHTML= `${destinations[3].distance}`;
-        mainDestinationDTravelTime.innerHTML = `${destinations[3].travel}`;
+        mainDestinationTravelTime.innerHTML = `${destinations[3].travel}`;
       //  subMenuButton.classList.add("active-sub-nav")
      
     }
