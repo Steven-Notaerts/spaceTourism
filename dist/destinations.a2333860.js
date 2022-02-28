@@ -132,7 +132,7 @@ module.exports = {
     "name": "Mars",
     "images": {
       "png": "./assets/image/destination/image-mars.png",
-      "webp": "./dist/image/destination/image-mars.webp"
+      "webp": "../dist/image/destination/image-mars.webp"
     },
     "description": "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!",
     "distance": "225 mil. km",
@@ -244,8 +244,8 @@ subMenuButtons.forEach(function (subMenuButton) {
       mainDestinationTitle.innerHTML = "".concat(destinations[0].name);
       mainDestinationDescription.innerHTML = "".concat(destinations[0].description);
       mainDestinationDistance.innerHTML = "".concat(destinations[0].distance);
-      mainDestinationTravelTime.innerHTML = "".concat(destinations[0].travel);
-      mainDestinationsImage.src = "".concat(destinations[0].images.webp); //console.log(mainDestinationsImage);   
+      mainDestinationTravelTime.innerHTML = "".concat(destinations[0].travel); // mainDestinationsImage.src = `${destinations[0].images.webp}`;     
+      //console.log(mainDestinationsImage);   
 
       document.querySelectorAll(".destinations__planet-image").setAttribute("src", "".concat(destinations[0].images.webp));
     }
@@ -254,12 +254,11 @@ subMenuButtons.forEach(function (subMenuButton) {
       mainDestinationTitle.innerHTML = "".concat(destinations[1].name);
       mainDestinationDescription.innerHTML = "".concat(destinations[1].description);
       mainDestinationDistance.innerHTML = "".concat(destinations[1].distance);
-      mainDestinationTravelTime.innerHTML = "".concat(destinations[1].travel);
-      mainDestinationsImage.src = "".concat(destinations[1].images.webp); //mainDestinationsImage.setAttribute("src", `${destinations[1].images.webp}`)
+      mainDestinationTravelTime.innerHTML = "".concat(destinations[1].travel); // mainDestinationsImage.src = `${destinations[1].images.webp}`;  
+      //mainDestinationsImage.setAttribute("src", `${destinations[1].images.webp}`)
       //  console.log(mainDestinationsImage);  
       // document.querySelectorAll("destinations__planet-image").setAttribute("src", './assets/image/destination/image-mars.webp')
-
-      document.querySelector(".destinations__planet-image").setAttribute("src", '../../dist/image/destination/image-mars.webp');
+      // document.querySelector(".destinations__planet-image").setAttribute("src", '../../dist/image/destination/image-mars.webp')
     }
 
     if (subMenuButton.classList.contains("europa")) {

@@ -27,7 +27,7 @@ subMenuButtons.forEach((subMenuButton) =>{
         mainDestinationDescription.innerHTML = `${destinations[0].description}`;
         mainDestinationDistance.innerHTML= `${destinations[0].distance}`;
         mainDestinationTravelTime.innerHTML = `${destinations[0].travel}`;
-        mainDestinationsImage.src = `${destinations[0].images.webp}`;     
+       // mainDestinationsImage.src = `${destinations[0].images.webp}`;     
         //console.log(mainDestinationsImage);   
         document.querySelectorAll(".destinations__planet-image").setAttribute("src", `${destinations[0].images.webp}`)
     }
@@ -36,11 +36,11 @@ subMenuButtons.forEach((subMenuButton) =>{
         mainDestinationDescription.innerHTML = `${destinations[1].description}`;
         mainDestinationDistance.innerHTML= `${destinations[1].distance}`;
         mainDestinationTravelTime.innerHTML = `${destinations[1].travel}`;
-        mainDestinationsImage.src = `${destinations[1].images.webp}`;  
+       // mainDestinationsImage.src = `${destinations[1].images.webp}`;  
         //mainDestinationsImage.setAttribute("src", `${destinations[1].images.webp}`)
-      //  console.log(mainDestinationsImage);  
-    // document.querySelectorAll("destinations__planet-image").setAttribute("src", './assets/image/destination/image-mars.webp')
-    document.querySelector(".destinations__planet-image").setAttribute("src", '../../dist/image/destination/image-mars.webp')
+        //  console.log(mainDestinationsImage);  
+        // document.querySelectorAll("destinations__planet-image").setAttribute("src", './assets/image/destination/image-mars.webp')
+        // document.querySelector(".destinations__planet-image").setAttribute("src", '../../dist/image/destination/image-mars.webp')
     }
     if(subMenuButton.classList.contains("europa")){
         mainDestinationTitle.innerHTML = `${destinations[2].name}`;

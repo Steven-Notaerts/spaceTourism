@@ -15,7 +15,7 @@
       "name": "Mars",
       "images": {
         "png": "./assets/image/destination/image-mars.png",
-        "webp": "./dist/image/destination/image-mars.webp"
+        "webp": "../dist/image/destination/image-mars.webp"
       },
       "description": "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!",
       "distance": "225 mil. km",
