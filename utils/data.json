@@ -15,7 +15,7 @@
       "name": "Mars",
       "images": {
         "png": "./assets/image/destination/image-mars.png",
-        "webp": "./assets/image/destination/image-mars.webp"
+        "webp": "./dist/image/destination/image-mars.webp"
       },
       "description": "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!",
       "distance": "225 mil. km",
@@ -35,7 +35,7 @@
       "name": "Titan",
       "images": {
         "png": "./assets/image/destination/image-titan.png",
-        "webp": "./assets/image/destination/image-titan.webp"
+        "webp": "/assets/image/destination/image-titan.webp"
       },
       "description": "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
       "distance": "1.6 bil. km",

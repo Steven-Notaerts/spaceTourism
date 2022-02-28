@@ -132,7 +132,7 @@ module.exports = {
     "name": "Mars",
     "images": {
       "png": "./assets/image/destination/image-mars.png",
-      "webp": "./assets/image/destination/image-mars.webp"
+      "webp": "./dist/image/destination/image-mars.webp"
     },
     "description": "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!",
     "distance": "225 mil. km",
@@ -150,7 +150,7 @@ module.exports = {
     "name": "Titan",
     "images": {
       "png": "./assets/image/destination/image-titan.png",
-      "webp": "./assets/image/destination/image-titan.webp"
+      "webp": "/assets/image/destination/image-titan.webp"
     },
     "description": "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
     "distance": "1.6 bil. km",
@@ -226,8 +226,8 @@ var mainDestinationTitle = document.querySelectorAll(".destination-info__main-ti
 var mainDestinationDescription = document.querySelectorAll(".destination-info__description")[0];
 var mainDestinationDistance = document.querySelectorAll(".destination-travel-info__distance-destination")[0];
 var mainDestinationTravelTime = document.querySelectorAll(".destination-travel-info__travel-time")[0];
-var mainDestinationsImage = document.querySelectorAll(".destinations__planet-image").currentSrc; //console.log(mainDestinationsImage)
-
+var mainDestinationsImage = document.querySelectorAll(".destinations__planet-image");
+console.log(mainDestinationsImage);
 subMenuButtons.forEach(function (subMenuButton) {
   subMenuButton.addEventListener("click", function () {
     var _this = this;
@@ -244,27 +244,29 @@ subMenuButtons.forEach(function (subMenuButton) {
       mainDestinationTitle.innerHTML = "".concat(destinations[0].name);
       mainDestinationDescription.innerHTML = "".concat(destinations[0].description);
       mainDestinationDistance.innerHTML = "".concat(destinations[0].distance);
-      mainDestinationTravelTime.innerHTML = "".concat(destinations[0].travel); // mainDestinationsImage.src = `${destinations[0].images.webp}`;     
-      //console.log(mainDestinationsImage);   
+      mainDestinationTravelTime.innerHTML = "".concat(destinations[0].travel);
+      mainDestinationsImage.src = "".concat(destinations[0].images.webp); //console.log(mainDestinationsImage);   
 
-      document.querySelector(".destinations__planet-image").setAttribute("src", "".concat(destinations[0].images.webp));
+      document.querySelectorAll(".destinations__planet-image").setAttribute("src", "".concat(destinations[0].images.webp));
     }
 
     if (subMenuButton.classList.contains("mars")) {
       mainDestinationTitle.innerHTML = "".concat(destinations[1].name);
       mainDestinationDescription.innerHTML = "".concat(destinations[1].description);
       mainDestinationDistance.innerHTML = "".concat(destinations[1].distance);
-      mainDestinationTravelTime.innerHTML = "".concat(destinations[1].travel); // mainDestinationsImage.src = '../assets/image/destination/image-mars.webp';   
+      mainDestinationTravelTime.innerHTML = "".concat(destinations[1].travel);
+      mainDestinationsImage.src = "".concat(destinations[1].images.webp); //mainDestinationsImage.setAttribute("src", `${destinations[1].images.webp}`)
       //  console.log(mainDestinationsImage);  
+      // document.querySelectorAll("destinations__planet-image").setAttribute("src", './assets/image/destination/image-mars.webp')
 
-      document.querySelector(".destinations__planet-image").setAttribute("src", './assets/image/destination/image-mars.webp');
+      document.querySelector(".destinations__planet-image").setAttribute("src", '../../dist/image/destination/image-mars.webp');
     }
 
     if (subMenuButton.classList.contains("europa")) {
       mainDestinationTitle.innerHTML = "".concat(destinations[2].name);
       mainDestinationDescription.innerHTML = "".concat(destinations[2].description);
       mainDestinationDistance.innerHTML = "".concat(destinations[2].distance);
-      mainDestinationTravelTime[0] = "".concat(destinations[2].travel);
+      mainDestinationTravelTime.innerHTML = "".concat(destinations[2].travel);
       console.log(mainDestinationsImage);
     }
 
@@ -274,6 +276,7 @@ subMenuButtons.forEach(function (subMenuButton) {
       mainDestinationDistance.innerHTML = "".concat(destinations[3].distance);
       mainDestinationTravelTime.innerHTML = "".concat(destinations[3].travel);
       console.log(mainDestinationsImage.src);
+      mainDestinationsImage.value = "".concat(destinations[3].images.webp);
     }
   });
 });
@@ -305,7 +308,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60950" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53585" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
