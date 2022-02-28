@@ -1,3 +1,6 @@
+
+
+
 //little test to see if js file is connected to html
 console.log("test")
 //import via destructering only destinations data
