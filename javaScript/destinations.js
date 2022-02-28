@@ -2,8 +2,8 @@
 console.log("test")
 //import via destructering only destinations data
 const {destinations} = require('../utils/data.json');
-console.log(destinations[0].images);
-
+console.log(destinations[0].images.webp);
+//select all sub menu buttons
 const subMenuButtons = document.querySelectorAll(".sub-nav__button")
 console.log(subMenuButtons)
 const mainDestinationTitle = document.querySelectorAll(".destination-info__main-title")[0]
@@ -22,25 +22,29 @@ subMenuButtons.forEach((subMenuButton) =>{
         this.classList.add('active-sub-nav');
        })
 
-        if(subMenuButton.classList.contains("moon")){       
+        if(subMenuButton.classList.contains("moon")){      
+        console.log(destinations[0]) 
+        console.log(destinations[0].images.webp) 
         mainDestinationTitle.innerHTML = `${destinations[0].name}`;
         mainDestinationDescription.innerHTML = `${destinations[0].description}`;
         mainDestinationDistance.innerHTML= `${destinations[0].distance}`;
         mainDestinationTravelTime.innerHTML = `${destinations[0].travel}`;
-       // mainDestinationsImage.src = `${destinations[0].images.webp}`;     
-        //console.log(mainDestinationsImage);   
-        document.querySelectorAll(".destinations__planet-image").setAttribute("src", `${destinations[0].images.webp}`)
+        mainDestinationsImage.src = `${destinations[0].images.webp}`;     
+        console.log(mainDestinationsImage.src);   
+        //document.querySelectorAll(".destinations__planet-image").setAttribute("src", `${destinations[0].images.webp}`)
     }
     if(subMenuButton.classList.contains("mars")){
+        console.log(destinations[1]) 
+        console.log(destinations[1].images.webp) 
         mainDestinationTitle.innerHTML = `${destinations[1].name}`;
         mainDestinationDescription.innerHTML = `${destinations[1].description}`;
         mainDestinationDistance.innerHTML= `${destinations[1].distance}`;
         mainDestinationTravelTime.innerHTML = `${destinations[1].travel}`;
-       // mainDestinationsImage.src = `${destinations[1].images.webp}`;  
+        //mainDestinationsImage.src = `${destinations[1].images.webp}`;  
         //mainDestinationsImage.setAttribute("src", `${destinations[1].images.webp}`)
         //  console.log(mainDestinationsImage);  
-        // document.querySelectorAll("destinations__planet-image").setAttribute("src", './assets/image/destination/image-mars.webp')
-        // document.querySelector(".destinations__planet-image").setAttribute("src", '../../dist/image/destination/image-mars.webp')
+         //document.querySelectorAll("destinations__planet-image").setAttribute("src", './assets/image/destination/image-mars.webp')
+         document.querySelector(".destinations__planet-image").setAttribute("src", `${destinations[1].images.webp}`)
     }
     if(subMenuButton.classList.contains("europa")){
         mainDestinationTitle.innerHTML = `${destinations[2].name}`;
