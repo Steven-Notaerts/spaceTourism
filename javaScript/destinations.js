@@ -2,6 +2,7 @@
 console.log("test")
 //import via destructering only destinations data
 const {destinations} = require('../utils/data.json');
+console.log(destinations)
 console.log(destinations[0].images.webp);
 //select all sub menu buttons
 const subMenuButtons = document.querySelectorAll(".sub-nav__button")
