@@ -22,7 +22,7 @@ body {
 .main-crew {
 }
 .crew {
-  margin-inline: auto;
+  //margin-inline: auto;
   top: 0;
   position: absolute;
   width: 100%;
@@ -46,6 +46,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 1.5rem;
 
     @media (min-width: $larger-screen-1281) {
       display: flex;
@@ -54,11 +55,8 @@ body {
   }
 
   &__sub-title {
-    //line-height: 1.1875rem;
     width: 100%;
-    // position: absolute;
     text-align: center;
-    //top: 5.5rem;
     text-transform: uppercase;
     color: $white;
     font-family: $font-barlow-condensed;
@@ -102,22 +100,20 @@ body {
       padding-right: 1.75rem;
     }
   }
-  &__planet-image-container {
+  &__member-image-container {
     margin-top: 2rem;
     display: flex;
     justify-content: center;
     width: 100%;
+    border-bottom: 1px solid $bottom-line;
+
     @media (min-width: $small-screen-481) {
       margin-top: 3.75rem;
     }
   }
-  &__planet-image {
-    width: 10.625rem;
-    height: 10.625rem;
-    animation: planet360;
-    animation-duration: 250s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+  &__member-image {
+    width: 11.07rem;
+    height: 13.875rem;
     @media (min-width: $small-screen-481) {
       width: 18.75rem;
       height: 18.75rem;
@@ -129,6 +125,30 @@ body {
     @media (min-width: $larger-screen-1281) {
       width: 27.8125rem;
       height: 27.8125rem;
+    }
+  }
+}
+
+.active-sub-nav {
+  border-bottom: 3px solid $white;
+  color: $white;
+  z-index: 10;
+}
+
+.desktop-wrapper {
+  @media (min-width: $large-screen-1025) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: $max-container-width;
+    margin: 0 auto;
+  }
+
+  &__sub-nav {
+    @media (min-width: $large-screen-1025) {
+      width: 27.8125rem;
+      height: 29.5rem;
+      text-align: left;
     }
   }
 }
