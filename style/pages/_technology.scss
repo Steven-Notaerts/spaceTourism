@@ -1,0 +1,20 @@
+@import "../../style/utils/variables";
+@import "../../style/utils/animations";
+@import "./style/utils/mixins";
+@import "../components/header";
+
+body {
+  background: url("/assets/image/technology/background-technology-mobile.jpg");
+  @include home-background();
+  @media (min-width: $small-screen-481) {
+    background: url("/assets/image/technology/background-technology-tablet.jpg");
+    @include home-background();
+  }
+  @media (min-width: $medium-screen-961) {
+    background: url("/assets/image/technology/background-technology-desktop.jpg");
+    @include home-background();
+  }
+
+  @media (min-width: $larger-screen-1281) {
+  }
+}

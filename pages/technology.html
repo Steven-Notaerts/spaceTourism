@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="frontEnd-mentors Space Tourism">
-        <meta name="keywords" content="HTML, CSS, SCSS, JavaScript">
-        <meta name="author" content="Steven Notaerts">
-        <title>Space Tourism</title>
-        <link rel="stylesheet" href="../style/main.scss" />
-        <link rel="stylesheet" href="../style/components/_header.scss" />
-        <link rel="stylesheet" href="/style/pages/_crew.scss">
-        <link rel="icon" href="../assets/icons/galaxy.png">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="frontEnd-mentors Space Tourism">
+    <meta name="keywords" content="HTML, CSS, SCSS, JavaScript">
+    <meta name="author" content="Steven Notaerts">
+    <title>Space Tourism</title>
+    <link rel="stylesheet" href="../style/main.scss" />
+    <link rel="stylesheet" href="../style/components/_header.scss" />
+    <link rel="stylesheet" href="/style/pages/_technology.scss">
+    <link rel="icon" href="../assets/icons/galaxy.png">
 </head>
+
 <body>
     <!-- header -->
     <header class="header">
@@ -21,7 +23,7 @@
             <!--header logo, logo is svg -->
             <!-- area-hidden to true, because logo is non interactive element -->
             <img src="/assets/image/shared/logo.svg" alt="" class="header__logo-image" aria-hidden="true" />
-    
+
             <!-- btn to open or close nav menu -->
             <button class="header__toggle-menu-btn" aria-controls="primary-navigation" aria-expanded="false">
                 <!-- screen reader only -->
@@ -34,19 +36,19 @@
                             <span area-hidden="true" class="navigation__number">00</span>Home
                         </a>
                     </li>
-    
+
                     <li>
                         <a class="navigation__link" data-attribute="destination" href="/pages/destination.html">
                             <span area-hidden="true" class="navigation__number">01</span>Destination
                         </a>
                     </li>
                     <li>
-                        <a class="navigation__link  active-main" href="/pages/crew.html">
+                        <a class="navigation__link" href="/pages/crew.html">
                             <span area-hidden="true" class="navigation__number">02</span>Crew
                         </a>
                     </li>
                     <li>
-                        <a class="navigation__link" href="/pages/technology.html">
+                        <a class="navigation__link active-main" href="/pages/technology.html">
                             <span area-hidden="true" class="navigation__number">03</span>Technology
                         </a>
                     </li>
@@ -54,6 +56,13 @@
             </nav>
         </div>
     </header>
+
+  
+
+    </main>
 </body>
+
 <script src="/javaScript/header.js"></script>
+<script src="/javaScript/destinations.js"></script>
+
 </html>
