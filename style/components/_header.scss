@@ -65,6 +65,7 @@
 
 .navigation {
   display: flex;
+
   @media (max-width: $small-screen-481) {
     --gap: 2em;
     position: fixed;
@@ -86,6 +87,7 @@
     flex-direction: row;
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(5rem);
+    z-index: 10;
   }
   @media (min-width: $larger-screen-1281) {
     // padding-right: 10.3125rem;
@@ -95,6 +97,7 @@
     top: 0;
     background: none;
     backdrop-filter: none;
+    z-index: 10;
     &::before {
       content: "";
       border: 1px solid $white;
