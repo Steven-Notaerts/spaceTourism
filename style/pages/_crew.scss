@@ -23,6 +23,7 @@ body {
 }
 .crew {
   //margin-inline: auto;
+
   top: 0;
   position: absolute;
   width: 100%;
@@ -51,14 +52,16 @@ body {
 
     @media (min-width: $large-screen-1025) {
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
     }
   }
-
-  &__sub-title {
+  &__sub-title-container {
     width: 100%;
     max-width: $max-container-width;
+    padding-left: 7rem;
+  }
+  &__sub-title {
     text-align: center;
     text-transform: uppercase;
     color: $white;
@@ -69,14 +72,10 @@ body {
 
     @media (min-width: $small-screen-481) {
       text-align: left;
-      padding-left: 2.40625rem;
+      padding-left: 1rem;
       font-size: 1.25rem;
     }
     @media (min-width: $large-screen-1025) {
-      // padding-left: 10.406255rem;
-      padding-left: 0;
-      width: $max-container-width;
-      // max-width: $max-container-width;
       margin: 0 auto;
       font-size: 1.75rem;
       line-height: 2.125rem;
@@ -98,10 +97,12 @@ body {
       font-size: 1.25rem;
       padding-right: 1.1875rem;
     }
-    @media (min-width: $larger-screen-1281) {
+    @media (min-width: $large-screen-1025) {
       font-size: 1.75rem;
       line-height: 2.125rem;
       padding-right: 1.75rem;
+    }
+    @media (min-width: $larger-screen-1281) {
     }
   }
   &__member-image-container {
@@ -113,6 +114,7 @@ body {
 
     @media (min-width: $small-screen-481) {
       margin-top: 3.75rem;
+      border-bottom: none;
     }
     @media (min-width: $large-screen-1025) {
       margin-top: 0;
@@ -129,6 +131,7 @@ body {
     }
     @media (min-width: $large-screen-1025) {
       margin-top: 4.0625rem;
+      margin-right: -6rem;
     }
 
     @media (min-width: $larger-screen-1281) {
@@ -149,11 +152,11 @@ body {
       margin-top: 3.75rem;
     }
     @media (min-width: $large-screen-1025) {
-      // max-width: $max-container-width;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       margin-top: 9.625rem;
+      padding-left: 7rem;
     }
 
     @media (min-width: $larger-screen-1281) {
