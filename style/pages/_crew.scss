@@ -59,7 +59,10 @@ body {
   &__sub-title-container {
     width: 100%;
     max-width: $max-container-width;
-    padding-left: 7rem;
+
+    @media (min-width: $larger-screen-1281) {
+      padding-left: 7rem;
+    }
   }
   &__sub-title {
     text-align: center;
@@ -156,10 +159,10 @@ body {
       flex-direction: column;
       justify-content: flex-start;
       margin-top: 9.625rem;
-      padding-left: 7rem;
     }
 
     @media (min-width: $larger-screen-1281) {
+      padding-left: 7rem;
     }
   }
 
