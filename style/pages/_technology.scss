@@ -102,15 +102,6 @@ body {
       padding-right: 1.75rem;
     }
   }
-  &__planet-image-container {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    @media (min-width: $small-screen-481) {
-      margin-top: 3.75rem;
-    }
-  }
   &__planet-image {
     width: 10.625rem;
     height: 10.625rem;
