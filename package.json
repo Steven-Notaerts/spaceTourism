@@ -8,9 +8,9 @@
     "build": "parcel build ./index.html"
   },
   "staticFiles": {
-        "staticPath": "assets",
-        "watcherGlob": "**"
-    },
+    "staticPath": "assets",
+    "watcherGlob": "**"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

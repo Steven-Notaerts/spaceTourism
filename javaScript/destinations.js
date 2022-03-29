@@ -26,46 +26,43 @@ subMenuButtons.forEach((subMenuButton) =>{
         this.classList.add('active-sub-nav');
        })
 
-        if(subMenuButton.classList.contains("moon")){      
-        console.log(destinations[0]) 
-        console.log(destinations[0].images.webp) 
+        if(subMenuButton.classList.contains("moon")){     
         mainDestinationTitle.innerHTML = `${destinations[0].name}`;
         mainDestinationDescription.innerHTML = `${destinations[0].description}`;
         mainDestinationDistance.innerHTML= `${destinations[0].distance}`;
         mainDestinationTravelTime.innerHTML = `${destinations[0].travel}`;
-        mainDestinationsImage.src = `${destinations[0].images.webp}`;     
-        console.log(mainDestinationsImage.src);   
-        //document.querySelectorAll(".destinations__planet-image").setAttribute("src", `${destinations[0].images.webp}`)
+        mainDestinationsImage = `${destinations[0].images.webp}`;     
+        console.log(destinations[0].images.webp);   
+       // document.querySelectorAll(".destinations__planet-image").setAttribute("src", `${destinations[0].images.webp}`)
     }
     if(subMenuButton.classList.contains("mars")){
-        console.log(destinations[1]) 
-        console.log(destinations[1].images.webp) 
+        
         mainDestinationTitle.innerHTML = `${destinations[1].name}`;
         mainDestinationDescription.innerHTML = `${destinations[1].description}`;
         mainDestinationDistance.innerHTML= `${destinations[1].distance}`;
         mainDestinationTravelTime.innerHTML = `${destinations[1].travel}`;
-        //mainDestinationsImage.src = `${destinations[1].images.webp}`;  
-        //mainDestinationsImage.setAttribute("src", `${destinations[1].images.webp}`)
+        mainDestinationsImage.src = "../images/destination/image-mars.webp";  
+        console.log(destinations[1].images.webp);   
+       // mainDestinationsImage.setAttribute("src", `${destinations[1].images.webp}`)
         //  console.log(mainDestinationsImage);  
-         //document.querySelectorAll("destinations__planet-image").setAttribute("src", './assets/image/destination/image-mars.webp')
-         document.querySelector(".destinations__planet-image").setAttribute("src", `${destinations[1].images.webp}`)
+       // document.querySelectorAll("destinations__planet-image").setAttribute("src", './image/destination/image-mars.webp')
+        // document.querySelector(".destinations__planet-image").setAttribute("src", `${destinations[1].images.webp}`)
     }
     if(subMenuButton.classList.contains("europa")){
         mainDestinationTitle.innerHTML = `${destinations[2].name}`;
         mainDestinationDescription.innerHTML = `${destinations[2].description}`;
         mainDestinationDistance.innerHTML= `${destinations[2].distance}`;
         mainDestinationTravelTime.innerHTML  = `${destinations[2].travel}`;      
-        console.log(mainDestinationsImage);   
+         mainDestinationsImage.src = "../images/destination/image-europe.webp";  
     }
     if(subMenuButton.classList.contains("titan")){
         mainDestinationTitle.innerHTML = `${destinations[3].name}`;
         mainDestinationDescription.innerHTML = `${destinations[3].description}`;
         mainDestinationDistance.innerHTML= `${destinations[3].distance}`;
         mainDestinationTravelTime.innerHTML = `${destinations[3].travel}`; 
-        console.log(mainDestinationsImage.src);      
-        mainDestinationsImage.value = `${destinations[3].images.webp}`;     
+          
+         mainDestinationsImage = "../image/destination/image-titan.webp";    
     }
     })
 })
-
 
