@@ -10,7 +10,7 @@ const mainDestinationTravelTime = document.querySelectorAll(".destination-travel
 let mainDestinationsImage = document.querySelectorAll(".destinations__planet-image")
 console.log(mainDestinationsImage.src)
 
-subMenuButtons.forEach((subMenuButton) =>{
+subMenuButtons.forEach((subMenuButton) => {
     subMenuButton.addEventListener("click", function(){
         //sub navigatie wanneer er op geklikt word op elke button de classlist verwijderd, 
         //en op de active (this) de claslist toegevoegd.
@@ -54,10 +54,8 @@ subMenuButtons.forEach((subMenuButton) =>{
         mainDestinationTitle.innerHTML = `${destinations[3].name}`;
         mainDestinationDescription.innerHTML = `${destinations[3].description}`;
         mainDestinationDistance.innerHTML= `${destinations[3].distance}`;
-        mainDestinationTravelTime.innerHTML = `${destinations[3].travel}`; 
-          
-         mainDestinationsImage = "../image/destination/image-titan.webp";    
-    }
+        mainDestinationTravelTime.innerHTML = `${destinations[3].travel}`;           
+        }
     })
 })
 
