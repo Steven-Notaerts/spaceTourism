@@ -23,7 +23,6 @@ crewSubNav.forEach((crewButton) => {
         subButton.classList.remove('crew-sub-nav__active');
         this.classList.add('crew-sub-nav__active');
        })
-
        //Douglas Hurley
        if(crewButton.classList.contains("douglas")){  
          //  crewMemberPicture.setAttribute('src', '')  
@@ -38,14 +37,13 @@ crewSubNav.forEach((crewButton) => {
          crewFunction.innerHTML = `${crew[1].role}`;
           crewName.innerHTML = `${crew[1].name}`;
           crewMemberInformation.innerHTML= `${crew[1].bio}`;        
-          crewMemberPicture.src = "../assets/image/crew/image-douglas-hurley.png";  
-         // mainDestinationsImage.src = `${destinations[0].images.webp}`;           
+           crewMemberPicture.src = `${crew[1].images.webp}`;           
      }
      //Victor Glover
     if(crewButton.classList.contains("victor")){    
-          crewFunction.innerHTML = `${crew[2].role}`;
-           crewName.innerHTML = `${crew[2].name}`;
-           crewMemberInformation.innerHTML= `${crew[2].bio}`;        
+        crewFunction.innerHTML = `${crew[2].role}`;
+        crewName.innerHTML = `${crew[2].name}`;
+        crewMemberInformation.innerHTML= `${crew[2].bio}`;        
         crewMemberPicture.setAttribute('src', `${crew[2].images.webp}`)                  
      }
      //Anousheh Ansari
