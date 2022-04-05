@@ -25,33 +25,31 @@ crewSubNav.forEach((crewButton) => {
        })
        //Douglas Hurley
        if(crewButton.classList.contains("douglas")){  
-         //  crewMemberPicture.setAttribute('src', '')  
-         crewFunction.innerHTML = `${crew[0].role}`;
-         crewName.innerHTML = `${crew[0].name}`;
-         crewMemberInformation.innerHTML= `${crew[0].bio}`;        
-        // crewMemberPicture.src = `${crew[0].images.webp}`;   
-         crewMemberPicture.setAttribute('src', `${crew[0].images.webp}`)          
+        crewFunction.innerText = `${crew[0].role}`;
+        crewName.innerText = `${crew[0].name}`;
+        crewMemberInformation.innerTinnerTextEXT= `${crew[0].bio}`;       
+        crewMemberPicture.setAttribute('src', `${crew[0].images.webp}`)          
      } 
     //MARK SHUTTLEWORTH
      if(crewButton.classList.contains("mark")){    
-         crewFunction.innerHTML = `${crew[1].role}`;
-          crewName.innerHTML = `${crew[1].name}`;
-          crewMemberInformation.innerHTML= `${crew[1].bio}`;        
-           crewMemberPicture.src = `${crew[1].images.webp}`;           
+        crewFunction.innerText = `${crew[1].role}`;
+        crewName.innerText = `${crew[1].name}`;
+        crewMemberInformation.innerText= `${crew[1].bio}`;        
+        crewMemberPicture.setAttribute('src', `${crew[1].images.webp}`)           
      }
      //Victor Glover
     if(crewButton.classList.contains("victor")){    
-        crewFunction.innerHTML = `${crew[2].role}`;
-        crewName.innerHTML = `${crew[2].name}`;
-        crewMemberInformation.innerHTML= `${crew[2].bio}`;        
+        crewFunction.innerText = `${crew[2].role}`;
+        crewName.innerText = `${crew[2].name}`;
+        crewMemberInformation.innerText= `${crew[2].bio}`;        
         crewMemberPicture.setAttribute('src', `${crew[2].images.webp}`)                  
      }
      //Anousheh Ansari
      if(crewButton.classList.contains("anousheh")){    
-         crewFunction.innerHTML = `${crew[3].role}`;
-         crewName.innerHTML = `${crew[3].name}`;
-         crewMemberInformation.innerHTML= `${crew[3].bio}`;        
-        crewMemberPicture.src = `${crew[3].images.webp}`;                 
+        crewFunction.innerText = `${crew[3].role}`;
+        crewName.innerText = `${crew[3].name}`;
+        crewMemberInformation.innerText= `${crew[3].bio}`;        
+        crewMemberPicture.setAttribute('src', `${crew[3].images.webp}`)                  
      }
 
     })
