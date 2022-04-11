@@ -119,16 +119,12 @@ body {
     background-position: bottom -2rem center;
 
     @media (min-width: 40.0625rem) {
-width:100%;
-min-width: 48rem;
-height: auto;
-//min-height: 10.625rem;
-min-height: 19.375rem;
-
-
-
+    width:100%;
+    min-width: 48rem;
+    height: auto;
+    //min-height: 10.625rem;
+    min-height: 19.375rem;
     }
-
   }
 
 
@@ -152,8 +148,7 @@ min-height: 19.375rem;
       &:nth-child(2){
       margin: 0 1rem;
     }
-    }
-    
+  }
   }
 
   &__tech-info{
