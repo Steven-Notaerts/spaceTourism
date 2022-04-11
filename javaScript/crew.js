@@ -2,17 +2,12 @@ console.log('crew.js test')
 
 //import via destructering only destinations data
 const {crew} = require('../utils/data.json');
-console.log(crew);
 
 const crewSubNav = document.querySelectorAll(".crew-sub-nav__item");
 let crewMemberPicture = document.querySelectorAll(".crew__member-image")[0];
-console.log(crewMemberPicture.src)
 let crewFunction = document.querySelectorAll(".crew__function")[0];
 let crewName = document.querySelectorAll(".crew__name")[0];
 let crewMemberInformation = document.querySelectorAll(".crew__member-information")[0];
-console.log(crewFunction)
-console.log(crewName);
-console.log(crewMemberInformation)
 
 crewSubNav.forEach((crewButton) => {
     console.log(crewButton)
@@ -27,7 +22,7 @@ crewSubNav.forEach((crewButton) => {
        if(crewButton.classList.contains("douglas")){  
         crewFunction.innerText = `${crew[0].role}`;
         crewName.innerText = `${crew[0].name}`;
-        crewMemberInformation.innerTinnerTextEXT= `${crew[0].bio}`;       
+        crewMemberInformation.innerText= `${crew[0].bio}`;       
         crewMemberPicture.setAttribute('src', `${crew[0].images.webp}`)          
      } 
     //MARK SHUTTLEWORTH
