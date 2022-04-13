@@ -324,6 +324,10 @@ body {
     mix-blend-mode: normal;
     opacity: 0.17;
     border-radius: 50%;
+    &:hover {
+      background-color: $hover-grey;
+      color: $dark-background;
+    }
   }
 
   &__active {
@@ -331,6 +335,7 @@ body {
     z-index: 1;
     opacity: 1;
   }
+    
 
   @media (min-width: $small-screen-481) {
     order: 2;

@@ -165,6 +165,10 @@ body {
       &:nth-child(2){
       margin: 0 1rem;
     }    
+    &:hover{
+      background-color: $hover-grey;
+      color: $dark-background;
+    }
 
     @media (min-width: $medium-screen-641) {
     width: 3.75rem;
