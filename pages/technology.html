@@ -1,104 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="frontEnd-mentors Space Tourism">
-    <meta name="keywords" content="HTML, CSS, SCSS, JavaScript">
-    <meta name="author" content="Steven Notaerts">
+    <meta name="description" content="frontEnd-mentors Space Tourism" />
+    <meta name="keywords" content="HTML, CSS, SCSS, JavaScript" />
+    <meta name="author" content="Steven Notaerts" />
     <title>Space Tourism</title>
     <link rel="stylesheet" href="../style/main.scss" />
     <link rel="stylesheet" href="../style/components/_header.scss" />
-    <link rel="stylesheet" href="/style/pages/_technology.scss">
-    <link rel="icon" href="../assets/icons/galaxy.png">
-</head>
+    <link rel="stylesheet" href="/style/pages/_technology.scss" />
+    <link rel="icon" href="../assets/icons/galaxy.png" />
+  </head>
 
-<body>
+  <body>
     <!-- header -->
     <header class="header">
-        <!-- header container -->
-        <div class="header__container">
-            <!--header logo, logo is svg -->
-            <!-- area-hidden to true, because logo is non interactive element -->
-            <img src="/assets/image/shared/logo.svg" alt="" class="header__logo-image" aria-hidden="true" />
+      <!-- header container -->
+      <div class="header__container">
+        <!--header logo, logo is svg -->
+        <!-- area-hidden to true, because logo is non interactive element -->
+        <img
+          src="/assets/image/shared/logo.svg"
+          alt=""
+          class="header__logo-image"
+          aria-hidden="true"
+        />
 
-            <!-- btn to open or close nav menu -->
-            <button class="header__toggle-menu-btn" aria-controls="primary-navigation" aria-expanded="false">
-                <!-- screen reader only -->
-                <span class="sr-only">Menu</span>
-            </button>
-            <nav>
-                <ul id="navigation" class="navigation" data-visible="false">
-                    <li>
-                        <a class="navigation__link" href="../index.html">
-                            <span area-hidden="true" class="navigation__number">00</span>Home
-                        </a>
-                    </li>
+        <!-- btn to open or close nav menu -->
+        <button
+          class="header__toggle-menu-btn"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <!-- screen reader only -->
+          <span class="sr-only">Menu</span>
+        </button>
+        <nav>
+          <ul id="navigation" class="navigation" data-visible="false">
+            <li>
+              <a class="navigation__link" href="../index.html">
+                <span area-hidden="true" class="navigation__number">00</span
+                >Home
+              </a>
+            </li>
 
-                    <li>
-                        <a class="navigation__link" data-attribute="destination" href="/pages/destination.html">
-                            <span area-hidden="true" class="navigation__number">01</span>Destination
-                        </a>
-                    </li>
-                    <li>
-                        <a class="navigation__link" href="/pages/crew.html">
-                            <span area-hidden="true" class="navigation__number">02</span>Crew
-                        </a>
-                    </li>
-                    <li>
-                        <a class="navigation__link active-main" href="/pages/technology.html">
-                            <span area-hidden="true" class="navigation__number">03</span>Technology
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+            <li>
+              <a
+                class="navigation__link"
+                data-attribute="destination"
+                href="/pages/destination.html"
+              >
+                <span area-hidden="true" class="navigation__number">01</span
+                >Destination
+              </a>
+            </li>
+            <li>
+              <a class="navigation__link" href="/pages/crew.html">
+                <span area-hidden="true" class="navigation__number">02</span
+                >Crew
+              </a>
+            </li>
+            <li>
+              <a
+                class="navigation__link active-main"
+                href="/pages/technology.html"
+              >
+                <span area-hidden="true" class="navigation__number">03</span
+                >Technology
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-<main class="main-technology">
-
-
-    <section class="technology">
-
+    <main class="main-technology">
+      <section class="technology">
         <!-- start container -->
         <div class="technology__container">
-            <h2 class="technology__sub-title">
-                <span class="technology__sub-title-number">03</span>space launch 101
-            </h2>
-         </div>    
-
-        <div class="technology__image-container">
-            <img  alt="" class="technology__tech-image" >
+          <h2 class="technology__sub-title">
+            <span class="technology__sub-title-number">03</span>space launch 101
+          </h2>
         </div>
-        
-<!-- 
-    ../assets/image/technology/image-launch-vehicle-portrait.jpg 
--->
 
-    <ul class="technology__list">
-        <li class="technology__list-item launch-vehicle technology-sub-nav-active">1</li>
-        <li class="technology__list-item spaceport">2</li>
-        <li class="technology__list-item space-capsule">3</li>
-    </ul>
+        <div class="technology-large-screen">
+          <div class="technology__image-container">
+            <img alt="" class="technology__tech-image" />
+          </div>
 
-    <div class="technology__tech-info">
-        <h3 class="technology__tech-sub-title">the terminology ...</h3>
-        <h2 class="technology__tech-title">launch vehicle</h2>
-        <p class="technology__tech-description">
-            A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space,
-        usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall,
-        it's quite an awe-inspiring sight on the launch pad!
-        </p>
-    </div>       
-</section>
+          <ul class="technology__list">
+            <li
+              class="technology__list-item launch-vehicle technology-sub-nav-active"
+            >
+              1
+            </li>
+            <li class="technology__list-item spaceport">2</li>
+            <li class="technology__list-item space-capsule">3</li>
+          </ul>
 
-</main>
+          <div class="technology__tech-info">
+            <h3 class="technology__tech-sub-title">the terminology ...</h3>
+            <h2 class="technology__tech-title">launch vehicle</h2>
+            <p class="technology__tech-description">
+              A launch vehicle or carrier rocket is a rocket-propelled vehicle
+              used to carry a payload from Earth's surface to space, usually to
+              Earth orbit or beyond. Our WEB-X carrier rocket is the most
+              powerful in operation. Standing 150 metres tall, it's quite an
+              awe-inspiring sight on the launch pad!
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 
-</body>
-
-<script src="/javaScript/header.js"></script>
-<script src="/javaScript/technology.js"></script>
-
+  <script src="/javaScript/header.js"></script>
+  <script src="/javaScript/technology.js"></script>
 </html>
