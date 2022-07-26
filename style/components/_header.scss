@@ -7,15 +7,15 @@
   @media (min-width: $small-screen-481) {
     height: 6rem;
   }
+
   @media (min-width: $larger-screen-1281) {
     margin-top: 2.5rem;
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0) 25%,
-      rgba(255, 255, 255, 0.04) 100%
-    );
+    background: linear-gradient(90deg,
+        rgba(255, 255, 255, 0) 25%,
+        rgba(255, 255, 255, 0.04) 100%);
     backdrop-filter: blur(5rem);
   }
+
   &__container {
     width: 100%;
     max-width: $max-container-width;
@@ -36,11 +36,13 @@
   &__logo-image {
     width: 2.5rem;
     height: 2.5rem;
+
     @media (min-width: $small-screen-481) {
       width: 3rem;
       height: 3rem;
     }
   }
+
   &__toggle-menu-btn {
     position: absolute;
     right: 1.125rem;
@@ -54,9 +56,11 @@
       height: 1.3125rem;
       z-index: 9999;
     }
+
     &[aria-expanded="true"] {
       background-image: url("/assets/image/shared/icon-close.svg");
     }
+
     @media (min-width: $small-screen-481) {
       display: none;
     }
@@ -77,6 +81,7 @@
     transition: transform 350ms ease-out;
     backdrop-filter: blur(1rem);
   }
+
   @media (min-width: $small-screen-481) {
     display: flex;
     align-items: center;
@@ -89,6 +94,7 @@
     backdrop-filter: blur(5rem);
     z-index: 10;
   }
+
   @media (min-width: $larger-screen-1281) {
     padding-right: 5rem;
     position: absolute;
@@ -97,6 +103,7 @@
     background: none;
     backdrop-filter: none;
     z-index: 10;
+
     &::before {
       content: "";
       border: 1px solid $white;
@@ -129,6 +136,7 @@
       height: 1.9375rem;
       border-right: 4px solid $hover-grey;
     }
+
     @media (min-width: $small-screen-481) {
       display: flex;
       align-items: center;
@@ -139,18 +147,21 @@
       line-height: 1.0625rem;
 
       &:hover {
+        padding-top: 3px;
         border-right: 0;
         mix-blend-mode: normal;
-        height: 6rem; 
+        height: 6rem;
         border-bottom: 3px solid rgba(255, 255, 255, 0.5);
       }
     }
+
     @media (min-width: $larger-screen-1281) {
       font-size: 1rem;
       line-height: 1.1875rem;
       margin-left: 3rem;
     }
   }
+
   &__number {
     margin-inline-end: 0.75rem;
     font-weight: 700;
@@ -159,6 +170,7 @@
       display: none;
     }
   }
+
   &[data-visible="true"] {
     transform: translateX(0%);
   }
@@ -170,10 +182,11 @@
     height: 1.9375rem;
   }
 }
+
 @media (min-width: $small-screen-481) {
   .active-main {
     border-right: 0;
-    // height: 6rem;
+    padding-top: 3px;
     border-bottom: 3px solid $white;
   }
 }
