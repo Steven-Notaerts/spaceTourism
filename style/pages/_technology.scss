@@ -63,6 +63,10 @@ body {
   }
 
   .technology-large-screen {
+    max-width: 42.375rem;
+    width: min(42.375rem, 100%);
+    height: auto;
+
     @media (min-width: $larger-screen-1281) {
       display: flex;
       flex-direction: row-reverse;
@@ -131,38 +135,37 @@ body {
   }
 
   &__image-container {
-    padding-bottom: 2.125rem;
-    display: flex;
-    align-items: center;
-
-    @media (min-width: $larger-screen-1281) {
-      width: 32.1875rem;
-      height: 32.9375rem;
-    }
+    margin-bottom: 2.125rem;
+    // display: flex;
+    // align-items: center;
+    max-width: 678px;
+    width: min(678px, 100%);
+    // @media (min-width: 23.4375em) {
+    //   width: 48rem;
+    //   height: 19.375rem;
+    // }
+    border: 1px solid red;
   }
 
   &__tech-image {
-    // width: 100%;
-    // min-width: 23.4375rem;
-    // max-width: 48rem;
-    // height: auto;
-    // min-height: 10.625rem;
+    border: 1px solid red;
+    // width: 23.4375rem;
+    //height: 10.625rem;
     background-image: url("/assets/image/technology/image-launch-vehicle-portrait.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom -2rem center;
+    max-width: 678px;
+    width: min(678px, 100%);
+    // background-position: bottom -2rem center;
 
-    @media (min-width: 40.0625rem) {
-      //  width: 100%;
-      //  min-width: 48rem;
-      //height: auto;
-      // min-height: 19.375rem;
+    @media (min-width: 23.5) {
+      width: 48rem;
+      height: 19.375rem;
     }
 
-    @media (min-width: $larger-screen-1281) {
-      // width: 32.1875rem;
-      // height: 32.9375rem;
-    }
+    @media (min-width: $large-screen-1025) {}
+
+    @media (min-width: $larger-screen-1281) {}
   }
 
   &__list {
@@ -224,20 +227,23 @@ body {
   }
 
   &__tech-info {
-    min-width: 20.4375rem;
+    max-width: 678px;
+    width: min(678px, 100% - 1.5rem);
+    margin-inline: auto;
     min-height: 13.75rem;
     color: $white;
     margin: 1.625rem 1.5rem;
+    border: 1px solid red;
 
     @media (min-width: $medium-screen-641) {
-      max-width: 28.625rem;
-      max-height: 14.8125rem;
+      // max-width: 28.625rem;
+      // max-height: 14.8125rem;
     }
 
     @media (min-width: $larger-screen-1281) {
-      margin-left: 0;
-      max-height: 19rem;
-      max-width: 29.375;
+      // margin-left: 0;
+      // max-height: 19rem;
+      // max-width: 29.375;
     }
   }
 
@@ -294,6 +300,7 @@ body {
     font-size: 0.9375rem;
     line-height: 1.5625rem;
     color: $light-purple;
+    border: 1px solid red;
 
     @media (min-width: $medium-screen-641) {
       line-height: 1.75rem;
@@ -310,7 +317,12 @@ body {
 }
 
 .info-wrapper {
+  @media (min-width: 30.0625rem) {}
+
   display: flex;
-  padding-top: 8.5625rem;
-  padding-left: 9rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // padding-top: 8.5625rem;
+  // padding-left: 9rem;
 }
