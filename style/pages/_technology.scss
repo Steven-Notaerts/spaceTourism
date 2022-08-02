@@ -63,8 +63,8 @@ body {
   }
 
   .technology-large-screen {
-    max-width: 42.375rem;
-    width: min(42.375rem, 100%);
+    max-width: 90rem;
+    width: min(90rem, 100%);
     height: auto;
 
     @media (min-width: $larger-screen-1281) {
@@ -136,32 +136,18 @@ body {
 
   &__image-container {
     margin-bottom: 2.125rem;
-    // display: flex;
-    // align-items: center;
-    max-width: 678px;
-    width: min(678px, 100%);
-    // @media (min-width: 23.4375em) {
-    //   width: 48rem;
-    //   height: 19.375rem;
-    // }
-    border: 1px solid red;
+    max-width: 90rem;
+    width: min(90rem, 100%);
   }
 
   &__tech-image {
-    border: 1px solid red;
-    // width: 23.4375rem;
-    //height: 10.625rem;
     background-image: url("/assets/image/technology/image-launch-vehicle-portrait.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 678px;
-    width: min(678px, 100%);
-    // background-position: bottom -2rem center;
+    max-width: 90rem;
+    width: min(90rem, 100%);
 
-    @media (min-width: 23.5) {
-      width: 48rem;
-      height: 19.375rem;
-    }
+    @media (min-width: 23.5) {}
 
     @media (min-width: $large-screen-1025) {}
 
@@ -227,8 +213,8 @@ body {
   }
 
   &__tech-info {
-    max-width: 678px;
-    width: min(678px, 100% - 1.5rem);
+    max-width: 48rem;
+    width: min(48rem, 100% - 1.5rem);
     margin-inline: auto;
     min-height: 13.75rem;
     color: $white;
