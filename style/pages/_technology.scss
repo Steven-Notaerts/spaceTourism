@@ -71,7 +71,8 @@ body {
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
-      width: $max-container-width;
+      width: 100%;
+      max-width: $max-container-width;
     }
   }
 
@@ -236,7 +237,6 @@ body {
     min-height: 13.75rem;
     color: $white;
     margin: 1.625rem 1.5rem;
-    border: 1px solid red;
 
     @media (min-width: $medium-screen-641) {}
 
@@ -296,7 +296,6 @@ body {
     font-size: 0.9375rem;
     line-height: 1.5625rem;
     color: $light-purple;
-    border: 1px solid red;
 
     @media (min-width: $medium-screen-641) {
       line-height: 1.75rem;
@@ -306,7 +305,8 @@ body {
 
     @media (min-width: $larger-screen-1281) {
       text-align: left;
-      width: 20.50rem;
+      width: 100%;
+      max-width: 29.375rem;
       height: 12rem;
     }
   }
@@ -316,15 +316,11 @@ body {
   @media (min-width: $large-screen-1025) {
     display: flex;
     flex-direction: row;
+    margin-left: 10rem;
   }
 
-
-
-  border: 1px solid green;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // padding-top: 8.5625rem;
-  // padding-left: 9rem;
 }

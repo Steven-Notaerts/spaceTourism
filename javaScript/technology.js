@@ -16,19 +16,40 @@ technologySubNav.forEach((technologyButton) => {
     if (technologyButton.classList.contains("launch-vehicle")) {
       technologyTitle.innerText = `${technology[0].name}`;
       technologyDescription.innerText = `${technology[0].description}`;
-      technologyImage.setAttribute("src", `${technology[0].images.landscape}`);
+      if (screen.width < 1024) {
+        technologyImage.setAttribute(
+          "src",
+          `${technology[0].images.landscape}`
+        );
+      } else {
+        technologyImage.setAttribute("src", `${technology[0].images.portrait}`);
+      }
     }
 
-    if (technologyButton.classList.contains("spaceport-landscape")) {
+    if (technologyButton.classList.contains("spaceport")) {
       technologyTitle.innerText = `${technology[1].name}`;
       technologyDescription.innerText = `${technology[1].description}`;
-      technologyImage.setAttribute("src", `${technology[1].images.landscape}`);
+      if (screen.width < 1024) {
+        technologyImage.setAttribute(
+          "src",
+          `${technology[2].images.landscape}`
+        );
+      } else {
+        technologyImage.setAttribute("src", `${technology[1].images.portrait}`);
+      }
     }
 
     if (technologyButton.classList.contains("space-capsule")) {
       technologyTitle.innerText = `${technology[2].name}`;
       technologyDescription.innerText = `${technology[2].description}`;
-      technologyImage.setAttribute("src", `${technology[2].images.landscape}`);
+      if (screen.width < 1024) {
+        technologyImage.setAttribute(
+          "src",
+          `${technology[2].images.landscape}`
+        );
+      } else {
+        technologyImage.setAttribute("src", `${technology[2].images.portrait}`);
+      }
     }
   });
 });
