@@ -6,32 +6,33 @@
 body {
   background: url("/assets/image/crew/background-crew-mobile.jpg");
   @include home-background();
+
   @media (min-width: $small-screen-481) {
     background: url("/assets/image/crew/background-crew-tablet.jpg");
     @include home-background();
   }
+
   @media (min-width: $medium-screen-961) {
     background: url("/assets/image/crew/background-crew-desktop.jpg");
     @include home-background();
   }
 
-  @media (min-width: $larger-screen-1281) {
-  }
+  @media (min-width: $larger-screen-1281) {}
 }
 
-.main-crew {
-}
+.main-crew {}
+
 .crew {
-  //margin-inline: auto;
-
   top: 0;
   position: absolute;
   width: 100%;
   max-width: $max-container-width;
   margin-top: 5.5rem;
+
   @media (min-width: $small-screen-481) {
     margin-top: 8.5rem;
   }
+
   @media (min-width: $larger-screen-1281) {
     left: 0;
     width: 100%;
@@ -42,6 +43,7 @@ body {
     justify-content: center;
     align-items: center;
   }
+
   &__container {
     width: 100%;
     display: flex;
@@ -56,21 +58,17 @@ body {
       align-items: center;
     }
   }
+
   &__sub-title-container {
     width: 100%;
     max-width: $max-container-width;
 
-    @media (min-width: $larger-screen-1281) {
-      //  padding-left: 7rem;
-    }
+    @media (min-width: $larger-screen-1281) {}
   }
 
   &__sub-title {
-    //line-height: 1.1875rem;
     width: 100%;
-    // position: absolute;
     text-align: center;
-    //top: 5.5rem;
     text-transform: uppercase;
     color: $white;
     font-family: $font-barlow-condensed;
@@ -83,6 +81,7 @@ body {
       padding-left: 2.40625rem;
       font-size: 1.25rem;
     }
+
     @media (min-width: $large-screen-1025) {
       padding-left: 10.406255rem;
       width: 100%;
@@ -104,10 +103,12 @@ body {
     line-height: 1.1875rem;
     letter-spacing: 2.7px;
     font-weight: 700;
+
     @media (min-width: $small-screen-481) {
       font-size: 1.25rem;
       padding-right: 1.1875rem;
     }
+
     @media (min-width: $larger-screen-1281) {
       font-size: 1.75rem;
       line-height: 2.125rem;
@@ -115,57 +116,6 @@ body {
     }
   }
 
-  // &__sub-title {
-  //   text-align: center;
-  //   text-transform: uppercase;
-  //   color: $white;
-  //   font-family: $font-barlow-condensed;
-  //   font-size: 1rem;
-  //   line-height: 1.1875rem;
-  //   letter-spacing: 2.7px;
-
-  //   @media (min-width: $small-screen-481) {
-  //     text-align: left;
-  //     padding-left: 1rem;
-  //     font-size: 1.25rem;
-  //   }
-  //   @media (min-width: $large-screen-1025) {
-  //     margin: 0 auto;
-  //     font-size: 1.75rem;
-  //     line-height: 2.125rem;
-  //     letter-spacing: 4.725px;
-  //   }
-  // }
-
-  // &__sub-title-number {
-  //   color: $white;
-  //   mix-blend-mode: normal;
-  //   opacity: 0.25;
-  //   padding-right: 1.125rem;
-  //   font-family: $font-barlow-condensed;
-  //   font-size: 1rem;
-  //   line-height: 1.1875rem;
-  //   letter-spacing: 2.7px;
-  //   font-weight: 700;
-  //   @media (min-width: $small-screen-481) {
-  //     font-size: 1.25rem;
-  //     padding-right: 1.1875rem;
-  //   }
-  //   @media (min-width: $large-screen-1025) {
-  //     // font-size: 1.75rem;
-  //     // line-height: 2.125rem;
-  //     // padding-right: 1.75rem;
-  //     // padding-left: 10.406255rem;
-  //     // width: 100%;
-  //     max-width: $max-container-width;
-  //     // margin: 0 auto;
-  //     font-size: 1.75rem;
-  //     line-height: 2.125rem;
-  //     letter-spacing: 4.725px;
-  //   }
-  //   @media (min-width: $larger-screen-1281) {
-  //   }
-  // }
   &__member-image-container {
     margin-top: 2rem;
     display: flex;
@@ -177,20 +127,24 @@ body {
       margin-top: 3.75rem;
       border-bottom: none;
     }
+
     @media (min-width: $large-screen-1025) {
       margin-top: 0;
       border-bottom: none;
       width: 80%;
     }
   }
+
   &__member-image {
     width: 11.07rem;
     height: 13.875rem;
+
     @media (min-width: $small-screen-481) {
       width: 28.523125rem;
       height: 35.75rem;
       margin-top: 0;
     }
+
     @media (min-width: $large-screen-1025) {
       margin-top: 4.0625rem;
       margin-right: -6rem;
@@ -213,6 +167,7 @@ body {
     @media (min-width: $small-screen-481) {
       margin-top: 3.75rem;
     }
+
     @media (min-width: $large-screen-1025) {
       display: flex;
       flex-direction: column;
@@ -222,8 +177,7 @@ body {
       padding-left: 10.406255rem;
     }
 
-    @media (min-width: $larger-screen-1281) {
-    }
+    @media (min-width: $larger-screen-1281) {}
   }
 
   &__function {
@@ -246,6 +200,7 @@ body {
       line-height: 1.75rem;
       height: 1.75rem;
     }
+
     @media (min-width: $large-screen-1025) {
       text-align: left;
       font-size: 2rem;
@@ -253,6 +208,7 @@ body {
       margin-bottom: 1.25rem;
     }
   }
+
   &__name {
     color: $white;
     font-family: $font-bellefair;
@@ -263,20 +219,21 @@ body {
     line-height: 1.75rem;
     margin-bottom: 1rem;
     width: 100%;
+
     @media (min-width: $small-screen-481) {
       font-size: 2.5rem;
       line-height: 2.875rem;
       height: 2.875rem;
     }
+
     @media (min-width: $large-screen-1025) {
       text-align: left;
-      font-size: 3.5rem;
+      font-size: calc(1.5rem + 1vw);
       line-height: 4rem;
       margin-bottom: 1.6875rem;
     }
 
-    @media (min-width: $larger-screen-1281) {
-    }
+    @media (min-width: $larger-screen-1281) {}
   }
 
   &__member-information {
@@ -290,6 +247,7 @@ body {
     margin: 0 auto;
     margin-bottom: 2rem;
     max-width: 28.625rem;
+
     @media (min-width: $small-screen-481) {
       line-height: 1.75rem;
       font-size: 1rem;
@@ -297,6 +255,7 @@ body {
       max-width: 37rem;
       height: 5.25rem;
     }
+
     @media (min-width: $large-screen-1025) {
       line-height: 2rem;
       font-size: 1.125rem;
@@ -317,6 +276,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
+
   &__item {
     width: 0.625rem;
     height: 0.625rem;
@@ -324,6 +284,7 @@ body {
     mix-blend-mode: normal;
     opacity: 0.17;
     border-radius: 50%;
+
     &:hover {
       background-color: $hover-grey;
       color: $dark-background;
@@ -335,12 +296,13 @@ body {
     z-index: 1;
     opacity: 1;
   }
-    
+
 
   @media (min-width: $small-screen-481) {
     order: 2;
     margin-bottom: 0;
   }
+
   @media (min-width: $large-screen-1025) {
     text-align: left;
     margin-left: 0;
@@ -368,6 +330,7 @@ body {
 .tablet-reverse {
   width: 100%;
   max-width: $max-container-width;
+
   @media (min-width: $small-screen-481) {
     display: flex;
     flex-direction: column-reverse;
@@ -380,6 +343,5 @@ body {
     justify-content: space-between;
   }
 
-  @media (min-width: $larger-screen-1281) {
-  }
+  @media (min-width: $larger-screen-1281) {}
 }
