@@ -32,7 +32,7 @@ technologySubNav.forEach((technologyButton) => {
       if (screen.width < 1024) {
         technologyImage.setAttribute(
           "src",
-          `${technology[2].images.landscape}`
+          `${technology[1].images.landscape}`
         );
       } else {
         technologyImage.setAttribute("src", `${technology[1].images.portrait}`);
