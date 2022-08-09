@@ -6,21 +6,22 @@
 body {
   background: url("/assets/image/destination/background-destination-mobile.jpg");
   @include home-background();
+
   @media (min-width: $small-screen-481) {
     background: url("/assets/image/destination/background-destination-tablet.jpg");
     @include home-background();
   }
+
   @media (min-width: $medium-screen-961) {
     background: url("/assets/image/destination/background-destination-desktop.jpg");
     @include home-background();
   }
 
-  @media (min-width: $larger-screen-1281) {
-  }
+  @media (min-width: $larger-screen-1281) {}
 }
 
-.main-destinations {
-}
+.main-destinations {}
+
 .destinations {
   margin-inline: auto;
   top: 0;
@@ -28,9 +29,11 @@ body {
   width: 100%;
   max-width: $max-container-width;
   margin-top: 5.5rem;
+
   @media (min-width: $small-screen-481) {
     margin-top: 8.5rem;
   }
+
   @media (min-width: $larger-screen-1281) {
     left: 0;
     width: 100%;
@@ -41,6 +44,7 @@ body {
     justify-content: center;
     align-items: center;
   }
+
   &__container {
     width: 100%;
     display: flex;
@@ -71,6 +75,7 @@ body {
       padding-left: 2.40625rem;
       font-size: 1.25rem;
     }
+
     @media (min-width: $large-screen-1025) {
       padding-left: 10.406255rem;
       width: 100%;
@@ -92,10 +97,12 @@ body {
     line-height: 1.1875rem;
     letter-spacing: 2.7px;
     font-weight: 700;
+
     @media (min-width: $small-screen-481) {
       font-size: 1.25rem;
       padding-right: 1.1875rem;
     }
+
     @media (min-width: $larger-screen-1281) {
       font-size: 1.75rem;
       line-height: 2.125rem;
@@ -108,10 +115,12 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
+
     @media (min-width: $small-screen-481) {
       margin-top: 3.75rem;
     }
   }
+
   &__planet-image {
     width: 10.625rem;
     height: 10.625rem;
@@ -119,17 +128,31 @@ body {
     animation-duration: 100s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+
     @media (min-width: $small-screen-481) {
       width: 18.75rem;
       height: 18.75rem;
+      animation: planet360;
+      animation-duration: 100s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
     }
+
     @media (min-width: $large-screen-1025) {
       margin-top: 4.0625rem;
+      animation: planet360;
+      animation-duration: 100s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
     }
 
     @media (min-width: $larger-screen-1281) {
       width: 27.8125rem;
       height: 27.8125rem;
+      animation: planet360;
+      animation-duration: 100s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
     }
   }
 }
@@ -139,10 +162,12 @@ body {
   height: 1.75rem;
   display: flex;
   justify-content: space-between;
+
   @media (min-width: $small-screen-481) {
     width: 17.84375rem;
     height: 2.125rem;
   }
+
   @media (min-width: $large-screen-1025) {
     // justify-content: flex-start;
   }
@@ -153,16 +178,18 @@ body {
     margin-top: 1.625rem;
     display: flex;
     justify-content: center;
+
     @media (min-width: $small-screen-481) {
       margin-top: 2rem;
     }
+
     @media (min-width: $large-screen-1025) {
       margin-top: 6.0625rem;
       justify-content: flex-start;
     }
   }
-  &__item {
-  }
+
+  &__item {}
 
   &__button {
     border: none;
@@ -178,10 +205,12 @@ body {
     // vertical-align: top;
     //inline flex to set the text to top
     display: inline-flex;
+
     &:active {
       border-bottom: 3px solid $white;
       color: $white;
     }
+
     &:hover {
       mix-blend-mode: normal;
       border-bottom: 3px solid rgba(255, 255, 255, 0.5);
@@ -201,9 +230,11 @@ body {
   max-width: 35.8125rem;
   width: 100%;
   max-width: $max-container-width;
+
   @media (min-width: $small-screen-481) {
     font-size: 2rem;
   }
+
   &__main-title {
     font-family: $font-bellefair;
     font-size: 3.5rem;
@@ -212,6 +243,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     margin: 0 auto;
+
     @media (min-width: $large-screen-1025) {
       text-align: left;
       font-size: 6.25rem;
@@ -231,11 +263,13 @@ body {
     margin: 0 auto;
     padding-bottom: 2rem;
     border-bottom: 1px solid $bottom-line;
+
     @media (min-width: $small-screen-481) {
       padding-bottom: 3.0625rem;
       line-height: 1.75rem;
       font-size: 1rem;
     }
+
     @media (min-width: $large-screen-1025) {
       text-align: left;
       margin: 0;
@@ -257,11 +291,13 @@ body {
       display: flex;
       justify-content: space-evenly;
       width: 573px;
+
       @media (min-width: $large-screen-1025) {
         justify-content: flex-start;
       }
     }
   }
+
   &__distance {
     margin-bottom: 2rem;
 
@@ -280,14 +316,17 @@ body {
     letter-spacing: 2.3625px;
     text-transform: uppercase;
     margin-bottom: 0.75rem;
+
     @media (min-width: $small-screen-481) {
       font-size: 0.875rem;
       line-height: 1.0625rem;
     }
+
     @media (min-width: $large-screen-1025) {
       text-align: left;
     }
   }
+
   &__distance-destination {
     text-align: center;
     color: $white;
@@ -296,17 +335,18 @@ body {
     line-height: 2rem;
     text-transform: uppercase;
     margin-bottom: 2rem;
+
     @media (min-width: $small-screen-481) {
       font-size: 1.75rem;
       line-height: 2rem;
     }
+
     @media (min-width: $large-screen-1025) {
       text-align: left;
     }
   }
 
-  &__travel {
-  }
+  &__travel {}
 
   &__travel-time-header {
     text-align: center;
@@ -317,10 +357,12 @@ body {
     letter-spacing: 2.3625px;
     text-transform: uppercase;
     margin-bottom: 0.75rem;
+
     @media (min-width: $small-screen-481) {
       font-size: 0.875rem;
       line-height: 1.0625rem;
     }
+
     @media (min-width: $large-screen-1025) {
       text-align: left;
     }
@@ -333,10 +375,12 @@ body {
     font-size: 1.75rem;
     line-height: 2rem;
     text-transform: uppercase;
+
     @media (min-width: $small-screen-481) {
       font-size: 1.75rem;
       line-height: 2rem;
     }
+
     @media (min-width: $large-screen-1025) {
       text-align: left;
     }
